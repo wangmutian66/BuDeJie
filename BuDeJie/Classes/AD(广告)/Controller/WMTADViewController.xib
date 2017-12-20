@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMTADViewController">
+            <connections>
+                <outlet property="LaunchImageView" destination="tgR-Of-OO9" id="47m-Rf-BuN"/>
+                <outlet property="addContainView" destination="ni0-0r-Zrh" id="Ykd-S3-zdA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LbX-y4-Cqx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgR-Of-OO9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-0r-Zrh" userLabel="广告位占位视图">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-At-DRT">
+                            <rect key="frame" x="292" y="18" width="75" height="41"/>
+                            <color key="backgroundColor" red="0.047992542386054993" green="0.013992666266858578" blue="0.013265477493405342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="aWI-b1-x2f"/>
+                                <constraint firstAttribute="height" constant="41" id="sS8-u2-b4O"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="跳过(3)"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qzl-At-DRT" secondAttribute="trailing" constant="8" id="QPD-NP-dvr"/>
+                        <constraint firstItem="qzl-At-DRT" firstAttribute="top" secondItem="ni0-0r-Zrh" secondAttribute="top" constant="18" id="lGK-ya-C8K"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.5851672887802124" green="0.95012229681015015" blue="0.035116564482450485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ni0-0r-Zrh" secondAttribute="trailing" id="4bG-Jc-eno"/>
+                <constraint firstItem="ni0-0r-Zrh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="56f-ui-pD3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ni0-0r-Zrh" secondAttribute="bottom" id="G6I-Cg-qpK"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="HUY-v6-x4G"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JSt-Pp-aan"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KGB-jo-ONq"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PIc-gU-Wfe"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SQA-IO-jT1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tgR-Of-OO9" secondAttribute="trailing" id="Xjr-QU-Kfo"/>
+                <constraint firstItem="ni0-0r-Zrh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gOC-Ce-bTH"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="i6A-6e-5QA"/>
+                <constraint firstItem="tgR-Of-OO9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="o1A-2I-OYJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tgR-Of-OO9" secondAttribute="bottom" id="ryP-zK-6wH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kbM-YX-HUd">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        </imageView>
+    </objects>
+</document>

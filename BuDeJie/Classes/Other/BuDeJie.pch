@@ -18,3 +18,11 @@
 #import "UIBarButtonItem+Item.h"
 #define WMTFun WMTLog(@"%s",__func__)
 #define WMTLog(...) NSLog(__VA_ARGS__)
+
+#define WMTScreenH  [UIScreen mainScreen].bounds.size.height
+#define WMTScreenW  [UIScreen mainScreen].bounds.size.width
+#define iphone6p (WMTScreenH==736)
+#define iphone6 (WMTScreenH==667)
+#define iphone5 (WMTScreenH==568)
+#define iphone4s (WMTScreenH==480)
+

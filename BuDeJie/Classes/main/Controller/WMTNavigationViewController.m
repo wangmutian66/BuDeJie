@@ -28,9 +28,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.interactivePopGestureRecognizer.delegate=nil;
     //控制我们的手势什么时候被触发，只有非根控制器 的时候
-    self.interactivePopGestureRecognizer.delegate=self;
+    
+//    self.interactivePopGestureRecognizer.delegate=self;
     //假死状态：程序还在运行 但是界面死了
+    
+    //全局滑动
+    /*
+     为什么导航控制器不是全局滑动 =>
+     */
+    UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    
+    //控制我们的手势什么时候被触发，只有非根控制器 的时候
+    pan.delegate=self;
+    
+    //禁止之前的手势
+    self.interactivePopGestureRecognizer.delegate=NO;
+    
 }
 
 #pragma mark - UIGestureRecognizerDelegate

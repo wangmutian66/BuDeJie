@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91F099290C2CC2F51694F72 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CC81A6596A008C36C8C396 /* libPods-BuDeJie.a */; };
 		EC7EDAB91FE2449B00C30DF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7EDAB71FE2449B00C30DF1 /* Main.storyboard */; };
 		EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7EDABA1FE2449B00C30DF1 /* Assets.xcassets */; };
 		EC7EDABE1FE2449B00C30DF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7EDABC1FE2449B00C30DF1 /* LaunchScreen.storyboard */; };
@@ -25,9 +26,21 @@
 		ECAFF78A1FE688550061755A /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7891FE688550061755A /* UIBarButtonItem+Item.m */; };
 		ECAFF78D1FE7E1580061755A /* WMTNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF78C1FE7E1580061755A /* WMTNavigationViewController.m */; };
 		ECAFF79F1FE7ED1C0061755A /* WMTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF79B1FE7ED1C0061755A /* WMTSettingViewController.m */; };
+		ECAFF7A91FE929100061755A /* WMTADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7A81FE929100061755A /* WMTADViewController.m */; };
+		ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7AA1FE92CBC0061755A /* WMTADViewController.xib */; };
+		ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7AD1FE95EC30061755A /* LaunchImage-568h@2x.png */; };
+		ECAFF7B51FE95EC30061755A /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7AE1FE95EC30061755A /* LaunchImage-700-568h@2x.png */; };
+		ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7AF1FE95EC30061755A /* LaunchImage-700@2x.png */; };
+		ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B01FE95EC30061755A /* LaunchImage-800-667h@2x.png */; };
+		ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B11FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png */; };
+		ECAFF7B91FE95EC30061755A /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B21FE95EC30061755A /* LaunchImage.png */; };
+		ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A5EAF42AA0A5BB79BF5728 /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
+		A2CC81A6596A008C36C8C396 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB347DF04590F1479D8E756 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 		EC7EDAAE1FE2449B00C30DF1 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7EDAB81FE2449B00C30DF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC7EDABA1FE2449B00C30DF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +75,16 @@
 		ECAFF78C1FE7E1580061755A /* WMTNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTNavigationViewController.m; sourceTree = "<group>"; };
 		ECAFF79A1FE7ED1C0061755A /* WMTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTSettingViewController.h; sourceTree = "<group>"; };
 		ECAFF79B1FE7ED1C0061755A /* WMTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTSettingViewController.m; sourceTree = "<group>"; };
+		ECAFF7A71FE929100061755A /* WMTADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTADViewController.h; sourceTree = "<group>"; };
+		ECAFF7A81FE929100061755A /* WMTADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTADViewController.m; sourceTree = "<group>"; };
+		ECAFF7AA1FE92CBC0061755A /* WMTADViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTADViewController.xib; sourceTree = "<group>"; };
+		ECAFF7AD1FE95EC30061755A /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		ECAFF7AE1FE95EC30061755A /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		ECAFF7AF1FE95EC30061755A /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		ECAFF7B01FE95EC30061755A /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		ECAFF7B11FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		ECAFF7B21FE95EC30061755A /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +92,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91F099290C2CC2F51694F72 /* libPods-BuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A4577720FE65E7FF1FC20E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAB347DF04590F1479D8E756 /* Pods-BuDeJie.debug.xcconfig */,
+				41A5EAF42AA0A5BB79BF5728 /* Pods-BuDeJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C9FFAE54E042C005B89F04E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC81A6596A008C36C8C396 /* libPods-BuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC7EDAA51FE2449B00C30DF1 = {
 			isa = PBXGroup;
 			children = (
 				EC7EDAB01FE2449B00C30DF1 /* BuDeJie */,
 				EC7EDAAF1FE2449B00C30DF1 /* Products */,
+				2A4577720FE65E7FF1FC20E3 /* Pods */,
+				4C9FFAE54E042C005B89F04E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +137,7 @@
 		EC7EDAB01FE2449B00C30DF1 /* BuDeJie */ = {
 			isa = PBXGroup;
 			children = (
+				ECAFF7AC1FE95EC30061755A /* 启动图片 */,
 				EC8834F61FE272B2009F69C4 /* Classes */,
 				EC7EDAB71FE2449B00C30DF1 /* Main.storyboard */,
 				EC7EDABA1FE2449B00C30DF1 /* Assets.xcassets */,
@@ -107,6 +151,7 @@
 		EC8834F61FE272B2009F69C4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ECAFF7A31FE928A00061755A /* AD(广告) */,
 				ECAFF7981FE7ED1C0061755A /* Setting(设置) */,
 				EC8835221FE2A452009F69C4 /* main */,
 				EC8835081FE272B2009F69C4 /* Other */,
@@ -371,6 +416,54 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		ECAFF7A31FE928A00061755A /* AD(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				ECAFF7A41FE928A00061755A /* Controller */,
+				ECAFF7A51FE928A00061755A /* Model */,
+				ECAFF7A61FE928A00061755A /* View */,
+			);
+			path = "AD(广告)";
+			sourceTree = "<group>";
+		};
+		ECAFF7A41FE928A00061755A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECAFF7A71FE929100061755A /* WMTADViewController.h */,
+				ECAFF7A81FE929100061755A /* WMTADViewController.m */,
+				ECAFF7AA1FE92CBC0061755A /* WMTADViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECAFF7A51FE928A00061755A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECAFF7A61FE928A00061755A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECAFF7AC1FE95EC30061755A /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				ECAFF7AD1FE95EC30061755A /* LaunchImage-568h@2x.png */,
+				ECAFF7AE1FE95EC30061755A /* LaunchImage-700-568h@2x.png */,
+				ECAFF7AF1FE95EC30061755A /* LaunchImage-700@2x.png */,
+				ECAFF7B01FE95EC30061755A /* LaunchImage-800-667h@2x.png */,
+				ECAFF7B11FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png */,
+				ECAFF7B21FE95EC30061755A /* LaunchImage.png */,
+				ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */,
+			);
+			path = "启动图片";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,9 +471,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC7EDAC41FE2449B00C30DF1 /* Build configuration list for PBXNativeTarget "BuDeJie" */;
 			buildPhases = (
+				74778E91FCDC457A8408F1A3 /* [CP] Check Pods Manifest.lock */,
 				EC7EDAAA1FE2449B00C30DF1 /* Sources */,
 				EC7EDAAB1FE2449B00C30DF1 /* Frameworks */,
 				EC7EDAAC1FE2449B00C30DF1 /* Resources */,
+				BE5CF1DB664EA4BFED918CD7 /* [CP] Embed Pods Frameworks */,
+				7501286123BAEAD5AEAAC7EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,14 +526,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAFF7B51FE95EC30061755A /* LaunchImage-700-568h@2x.png in Resources */,
+				ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */,
 				EC7EDABE1FE2449B00C30DF1 /* LaunchScreen.storyboard in Resources */,
 				EC7EDAC81FE2555700C30DF1 /* Images.xcassets in Resources */,
+				ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */,
+				ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */,
 				EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */,
+				ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */,
+				ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */,
+				ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				EC7EDAB91FE2449B00C30DF1 /* Main.storyboard in Resources */,
+				ECAFF7B91FE95EC30061755A /* LaunchImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74778E91FCDC457A8408F1A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuDeJie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7501286123BAEAD5AEAAC7EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE5CF1DB664EA4BFED918CD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC7EDAAA1FE2449B00C30DF1 /* Sources */ = {
@@ -450,6 +605,7 @@
 				EC8835121FE272B2009F69C4 /* main.m in Sources */,
 				ECAFF79F1FE7ED1C0061755A /* WMTSettingViewController.m in Sources */,
 				EC88352C1FE2ACF4009F69C4 /* UIImage+Image.m in Sources */,
+				ECAFF7A91FE929100061755A /* WMTADViewController.m in Sources */,
 				EC8835181FE2738C009F69C4 /* WMTFriendTrendViewController.m in Sources */,
 				EC8835111FE272B2009F69C4 /* AppDelegate.m in Sources */,
 				EC8835151FE2736D009F69C4 /* WMTEsesenceViewController.m in Sources */,
@@ -592,6 +748,7 @@
 		};
 		EC7EDAC51FE2449B00C30DF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAB347DF04590F1479D8E756 /* Pods-BuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -607,6 +764,7 @@
 		};
 		EC7EDAC61FE2449B00C30DF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41A5EAF42AA0A5BB79BF5728 /* Pods-BuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
