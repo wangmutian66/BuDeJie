@@ -7,6 +7,7 @@
 //
 
 #import "WMTNewViewController.h"
+#import "WMTSubTagViewController.h"
 
 @interface WMTNewViewController ()
 
@@ -35,6 +36,9 @@
 
 #pragma mark - 点击订阅标签调用
 -(void)tagclick{
+    //进入推荐标签界面
+    WMTSubTagViewController *subtag=[[WMTSubTagViewController alloc] init];
+    [self.navigationController pushViewController:subtag animated:YES];
     
 }
 

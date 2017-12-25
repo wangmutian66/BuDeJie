@@ -35,6 +35,11 @@
 		ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B11FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png */; };
 		ECAFF7B91FE95EC30061755A /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B21FE95EC30061755A /* LaunchImage.png */; };
 		ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */; };
+		ECAFF7BD1FEE26CD0061755A /* WMTADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7BC1FEE26CD0061755A /* WMTADItem.m */; };
+		ECAFF7C31FF10F660061755A /* WMTSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7C21FF10F660061755A /* WMTSubTagViewController.m */; };
+		ECAFF7C61FF118660061755A /* WMTSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7C51FF118660061755A /* WMTSubTagItem.m */; };
+		ECAFF7CD1FF120EB0061755A /* WMTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7CB1FF120EB0061755A /* WMTTableViewCell.m */; };
+		ECAFF7CE1FF120EB0061755A /* WMTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7CC1FF120EB0061755A /* WMTTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +90,15 @@
 		ECAFF7B11FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		ECAFF7B21FE95EC30061755A /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		ECAFF7BB1FEE26CD0061755A /* WMTADItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTADItem.h; sourceTree = "<group>"; };
+		ECAFF7BC1FEE26CD0061755A /* WMTADItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTADItem.m; sourceTree = "<group>"; };
+		ECAFF7C11FF10F660061755A /* WMTSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTSubTagViewController.h; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagViewController.h"; sourceTree = SOURCE_ROOT; };
+		ECAFF7C21FF10F660061755A /* WMTSubTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTSubTagViewController.m; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagViewController.m"; sourceTree = SOURCE_ROOT; };
+		ECAFF7C41FF118660061755A /* WMTSubTagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTSubTagItem.h; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagItem.h"; sourceTree = SOURCE_ROOT; };
+		ECAFF7C51FF118660061755A /* WMTSubTagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTSubTagItem.m; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagItem.m"; sourceTree = SOURCE_ROOT; };
+		ECAFF7CA1FF120EB0061755A /* WMTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTableViewCell.h; sourceTree = "<group>"; };
+		ECAFF7CB1FF120EB0061755A /* WMTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTableViewCell.m; sourceTree = "<group>"; };
+		ECAFF7CC1FF120EB0061755A /* WMTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +292,8 @@
 			children = (
 				EC88351C1FE27424009F69C4 /* WMTNewViewController.h */,
 				EC88351D1FE27424009F69C4 /* WMTNewViewController.m */,
+				ECAFF7C11FF10F660061755A /* WMTSubTagViewController.h */,
+				ECAFF7C21FF10F660061755A /* WMTSubTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +301,8 @@
 		EC8835061FE272B2009F69C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ECAFF7C41FF118660061755A /* WMTSubTagItem.h */,
+				ECAFF7C51FF118660061755A /* WMTSubTagItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +310,9 @@
 		EC8835071FE272B2009F69C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ECAFF7CA1FF120EB0061755A /* WMTTableViewCell.h */,
+				ECAFF7CB1FF120EB0061755A /* WMTTableViewCell.m */,
+				ECAFF7CC1FF120EB0061755A /* WMTTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +460,8 @@
 		ECAFF7A51FE928A00061755A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ECAFF7BB1FEE26CD0061755A /* WMTADItem.h */,
+				ECAFF7BC1FEE26CD0061755A /* WMTADItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +556,7 @@
 				ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */,
 				ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */,
 				EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */,
+				ECAFF7CE1FF120EB0061755A /* WMTTableViewCell.xib in Resources */,
 				ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */,
 				ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */,
 				ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -601,6 +625,8 @@
 			files = (
 				EC8835281FE2A4A2009F69C4 /* WMTTabBarController.m in Sources */,
 				ECAFF78A1FE688550061755A /* UIBarButtonItem+Item.m in Sources */,
+				ECAFF7BD1FEE26CD0061755A /* WMTADItem.m in Sources */,
+				ECAFF7CD1FF120EB0061755A /* WMTTableViewCell.m in Sources */,
 				EC8835211FE2745C009F69C4 /* WMTPublishViewController.m in Sources */,
 				EC8835121FE272B2009F69C4 /* main.m in Sources */,
 				ECAFF79F1FE7ED1C0061755A /* WMTSettingViewController.m in Sources */,
@@ -613,7 +639,9 @@
 				ECAFF7831FE54F5A0061755A /* WMTTabBar.m in Sources */,
 				ECAFF78D1FE7E1580061755A /* WMTNavigationViewController.m in Sources */,
 				EC88351B1FE273FD009F69C4 /* WMTMeTiewController.m in Sources */,
+				ECAFF7C61FF118660061755A /* WMTSubTagItem.m in Sources */,
 				ECAFF7861FE626A00061755A /* UIView+Frame.m in Sources */,
+				ECAFF7C31FF10F660061755A /* WMTSubTagViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

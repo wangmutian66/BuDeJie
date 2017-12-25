@@ -74,6 +74,8 @@
     
     //在这里设置返回按钮,只有非跟控制器才有返回按钮
     if(self.childViewControllers.count>0){ //判断非根控制器
+        viewController.hidesBottomBarWhenPushed=YES;
+        
         // 恢复滑动返回功能
         //1.手势被清空 2.可能手势代理做了一些事情
         viewController.navigationItem.leftBarButtonItem=[UIBarButtonItem backItemWithimage1:[UIImage imageNamed:@"navigationButtonReturn"]  hightImage:[UIImage imageNamed:@"navigationButtonReturnClick"]  target:self action:@selector(back) title:@"返回"];

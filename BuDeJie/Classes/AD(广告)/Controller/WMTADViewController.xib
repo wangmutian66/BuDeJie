@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="LaunchImageView" destination="tgR-Of-OO9" id="47m-Rf-BuN"/>
                 <outlet property="addContainView" destination="ni0-0r-Zrh" id="Ykd-S3-zdA"/>
+                <outlet property="jumpBtn" destination="qzl-At-DRT" id="pjT-3J-eil"/>
                 <outlet property="view" destination="iN0-l3-epB" id="LbX-y4-Cqx"/>
             </connections>
         </placeholder>
@@ -25,29 +26,33 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgR-Of-OO9">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-0r-Zrh" userLabel="广告位占位视图">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni0-0r-Zrh" userLabel="广告位占位视图">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
-                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-At-DRT">
+                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gkn-sm-KQq">
                             <rect key="frame" x="292" y="18" width="75" height="41"/>
-                            <color key="backgroundColor" red="0.047992542386054993" green="0.013992666266858578" blue="0.013265477493405342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="75" id="aWI-b1-x2f"/>
-                                <constraint firstAttribute="height" constant="41" id="sS8-u2-b4O"/>
-                            </constraints>
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="跳过(3)"/>
-                        </button>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="qzl-At-DRT" secondAttribute="trailing" constant="8" id="QPD-NP-dvr"/>
-                        <constraint firstItem="qzl-At-DRT" firstAttribute="top" secondItem="ni0-0r-Zrh" secondAttribute="top" constant="18" id="lGK-ya-C8K"/>
-                    </constraints>
                 </view>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-At-DRT">
+                    <rect key="frame" x="229" y="30" width="136" height="41"/>
+                    <color key="backgroundColor" red="0.047992542386054993" green="0.013992666266858578" blue="0.013265477493405342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="aWI-b1-x2f"/>
+                        <constraint firstAttribute="height" constant="41" id="sS8-u2-b4O"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="跳过(3)"/>
+                    <connections>
+                        <action selector="click_jump:" destination="-1" eventType="touchUpInside" id="iPl-LY-Ukm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.5851672887802124" green="0.95012229681015015" blue="0.035116564482450485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qzl-At-DRT" secondAttribute="trailing" constant="10" id="453-ow-wwg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ni0-0r-Zrh" secondAttribute="trailing" id="4bG-Jc-eno"/>
                 <constraint firstItem="ni0-0r-Zrh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="56f-ui-pD3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ni0-0r-Zrh" secondAttribute="bottom" id="G6I-Cg-qpK"/>
@@ -61,6 +66,7 @@
                 <constraint firstItem="tgR-Of-OO9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="i6A-6e-5QA"/>
                 <constraint firstItem="tgR-Of-OO9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="o1A-2I-OYJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tgR-Of-OO9" secondAttribute="bottom" id="ryP-zK-6wH"/>
+                <constraint firstItem="qzl-At-DRT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="sgS-j5-4jV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="24.5" y="51.5"/>
