@@ -17,7 +17,6 @@
 		EC8835151FE2736D009F69C4 /* WMTEsesenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8835141FE2736D009F69C4 /* WMTEsesenceViewController.m */; };
 		EC8835181FE2738C009F69C4 /* WMTFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8835171FE2738C009F69C4 /* WMTFriendTrendViewController.m */; };
 		EC88351B1FE273FD009F69C4 /* WMTMeTiewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */; };
-		EC88351E1FE27424009F69C4 /* WMTNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC88351D1FE27424009F69C4 /* WMTNewViewController.m */; };
 		EC8835211FE2745C009F69C4 /* WMTPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8835201FE2745C009F69C4 /* WMTPublishViewController.m */; };
 		EC8835281FE2A4A2009F69C4 /* WMTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8835271FE2A4A2009F69C4 /* WMTTabBarController.m */; };
 		EC88352C1FE2ACF4009F69C4 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EC88352B1FE2ACF4009F69C4 /* UIImage+Image.m */; };
@@ -36,10 +35,11 @@
 		ECAFF7B91FE95EC30061755A /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B21FE95EC30061755A /* LaunchImage.png */; };
 		ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */; };
 		ECAFF7BD1FEE26CD0061755A /* WMTADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7BC1FEE26CD0061755A /* WMTADItem.m */; };
-		ECAFF7C31FF10F660061755A /* WMTSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7C21FF10F660061755A /* WMTSubTagViewController.m */; };
-		ECAFF7C61FF118660061755A /* WMTSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7C51FF118660061755A /* WMTSubTagItem.m */; };
-		ECAFF7CD1FF120EB0061755A /* WMTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7CB1FF120EB0061755A /* WMTTableViewCell.m */; };
-		ECAFF7CE1FF120EB0061755A /* WMTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7CC1FF120EB0061755A /* WMTTableViewCell.xib */; };
+		ECAFF7D81FF150510061755A /* WMTNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7D71FF150510061755A /* WMTNewViewController.m */; };
+		ECAFF7E21FF1DE140061755A /* WMTSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7E11FF1DE140061755A /* WMTSubTagViewController.m */; };
+		ECAFF7E51FF1E60F0061755A /* WMTSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7E41FF1E60F0061755A /* WMTSubTagItem.m */; };
+		ECAFF7E91FF1EF9E0061755A /* WMTSubTagcel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7E71FF1EF9E0061755A /* WMTSubTagcel.m */; };
+		ECAFF7EA1FF1EF9E0061755A /* WMTSubTagcel.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7E81FF1EF9E0061755A /* WMTSubTagcel.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +59,10 @@
 		EC8835141FE2736D009F69C4 /* WMTEsesenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTEsesenceViewController.m; sourceTree = "<group>"; };
 		EC8835161FE2738C009F69C4 /* WMTFriendTrendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTFriendTrendViewController.h; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTFriendTrendViewController.h"; sourceTree = SOURCE_ROOT; };
 		EC8835171FE2738C009F69C4 /* WMTFriendTrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTFriendTrendViewController.m; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTFriendTrendViewController.m"; sourceTree = SOURCE_ROOT; };
-		EC8835191FE273FD009F69C4 /* WMTMeTiewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTMeTiewController.h; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTMeTiewController.h"; sourceTree = SOURCE_ROOT; };
-		EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTMeTiewController.m; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTMeTiewController.m"; sourceTree = SOURCE_ROOT; };
-		EC88351C1FE27424009F69C4 /* WMTNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTNewViewController.h; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTNewViewController.h"; sourceTree = SOURCE_ROOT; };
-		EC88351D1FE27424009F69C4 /* WMTNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTNewViewController.m; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTNewViewController.m"; sourceTree = SOURCE_ROOT; };
-		EC88351F1FE2745C009F69C4 /* WMTPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTPublishViewController.h; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTPublishViewController.h"; sourceTree = SOURCE_ROOT; };
-		EC8835201FE2745C009F69C4 /* WMTPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTPublishViewController.m; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTPublishViewController.m"; sourceTree = SOURCE_ROOT; };
+		EC8835191FE273FD009F69C4 /* WMTMeTiewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTMeTiewController.h; path = "BuDeJie/Classes/Me(我)/Controller/WMTMeTiewController.h"; sourceTree = SOURCE_ROOT; };
+		EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTMeTiewController.m; path = "BuDeJie/Classes/Me(我)/Controller/WMTMeTiewController.m"; sourceTree = SOURCE_ROOT; };
+		EC88351F1FE2745C009F69C4 /* WMTPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTPublishViewController.h; path = "BuDeJie/Classes/Publish(发布)/Controller/WMTPublishViewController.h"; sourceTree = SOURCE_ROOT; };
+		EC8835201FE2745C009F69C4 /* WMTPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTPublishViewController.m; path = "BuDeJie/Classes/Publish(发布)/Controller/WMTPublishViewController.m"; sourceTree = SOURCE_ROOT; };
 		EC8835261FE2A4A2009F69C4 /* WMTTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTabBarController.h; sourceTree = "<group>"; };
 		EC8835271FE2A4A2009F69C4 /* WMTTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTabBarController.m; sourceTree = "<group>"; };
 		EC88352A1FE2ACF4009F69C4 /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
@@ -92,13 +90,15 @@
 		ECAFF7B31FE95EC30061755A /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		ECAFF7BB1FEE26CD0061755A /* WMTADItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTADItem.h; sourceTree = "<group>"; };
 		ECAFF7BC1FEE26CD0061755A /* WMTADItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTADItem.m; sourceTree = "<group>"; };
-		ECAFF7C11FF10F660061755A /* WMTSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTSubTagViewController.h; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagViewController.h"; sourceTree = SOURCE_ROOT; };
-		ECAFF7C21FF10F660061755A /* WMTSubTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTSubTagViewController.m; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagViewController.m"; sourceTree = SOURCE_ROOT; };
-		ECAFF7C41FF118660061755A /* WMTSubTagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTSubTagItem.h; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagItem.h"; sourceTree = SOURCE_ROOT; };
-		ECAFF7C51FF118660061755A /* WMTSubTagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTSubTagItem.m; path = "BuDeJie/Classes/AD(广告)/Model/WMTSubTagItem.m"; sourceTree = SOURCE_ROOT; };
-		ECAFF7CA1FF120EB0061755A /* WMTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTableViewCell.h; sourceTree = "<group>"; };
-		ECAFF7CB1FF120EB0061755A /* WMTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTableViewCell.m; sourceTree = "<group>"; };
-		ECAFF7CC1FF120EB0061755A /* WMTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTTableViewCell.xib; sourceTree = "<group>"; };
+		ECAFF7D61FF150500061755A /* WMTNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMTNewViewController.h; path = "../../../../../BuDeJie1/BuDeJie/Classes/Esesence(精华)/Controller/WMTNewViewController.h"; sourceTree = "<group>"; };
+		ECAFF7D71FF150510061755A /* WMTNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMTNewViewController.m; path = "../../../../../BuDeJie1/BuDeJie/Classes/Esesence(精华)/Controller/WMTNewViewController.m"; sourceTree = "<group>"; };
+		ECAFF7E01FF1DE140061755A /* WMTSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTSubTagViewController.h; sourceTree = "<group>"; };
+		ECAFF7E11FF1DE140061755A /* WMTSubTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTSubTagViewController.m; sourceTree = "<group>"; };
+		ECAFF7E31FF1E60F0061755A /* WMTSubTagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTSubTagItem.h; sourceTree = "<group>"; };
+		ECAFF7E41FF1E60F0061755A /* WMTSubTagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTSubTagItem.m; sourceTree = "<group>"; };
+		ECAFF7E61FF1EF9E0061755A /* WMTSubTagcel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTSubTagcel.h; sourceTree = "<group>"; };
+		ECAFF7E71FF1EF9E0061755A /* WMTSubTagcel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTSubTagcel.m; sourceTree = "<group>"; };
+		ECAFF7E81FF1EF9E0061755A /* WMTSubTagcel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTSubTagcel.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				EC8834F81FE272B2009F69C4 /* Controller */,
-				EC8834FA1FE272B2009F69C4 /* Model */,
-				EC8834FB1FE272B2009F69C4 /* View */,
 			);
 			path = "Esesence(精华)";
 			sourceTree = "<group>";
@@ -195,20 +193,6 @@
 				EC8835141FE2736D009F69C4 /* WMTEsesenceViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		EC8834FA1FE272B2009F69C4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EC8834FB1FE272B2009F69C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EC8834FC1FE272B2009F69C4 /* FriendTrend(关注) */ = {
@@ -247,72 +231,29 @@
 		EC8835001FE272B2009F69C4 /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
-				EC8835011FE272B2009F69C4 /* Controller */,
-				EC8835021FE272B2009F69C4 /* Model */,
-				EC8835031FE272B2009F69C4 /* View */,
+				ECAFF7DF1FF154B10061755A /* Controller */,
+				ECAFF7DE1FF154B10061755A /* Model */,
+				ECAFF7DD1FF154B00061755A /* View */,
 			);
 			path = "Me(我)";
-			sourceTree = "<group>";
-		};
-		EC8835011FE272B2009F69C4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EC8835191FE273FD009F69C4 /* WMTMeTiewController.h */,
-				EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EC8835021FE272B2009F69C4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EC8835031FE272B2009F69C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EC8835041FE272B2009F69C4 /* New(新贴) */ = {
 			isa = PBXGroup;
 			children = (
-				EC8835051FE272B2009F69C4 /* Controller */,
-				EC8835061FE272B2009F69C4 /* Model */,
+				ECAFF7CF1FF14F020061755A /* Controller */,
+				ECAFF7D91FF153AB0061755A /* Model */,
 				EC8835071FE272B2009F69C4 /* View */,
 			);
 			path = "New(新贴)";
 			sourceTree = "<group>";
 		};
-		EC8835051FE272B2009F69C4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EC88351C1FE27424009F69C4 /* WMTNewViewController.h */,
-				EC88351D1FE27424009F69C4 /* WMTNewViewController.m */,
-				ECAFF7C11FF10F660061755A /* WMTSubTagViewController.h */,
-				ECAFF7C21FF10F660061755A /* WMTSubTagViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EC8835061FE272B2009F69C4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				ECAFF7C41FF118660061755A /* WMTSubTagItem.h */,
-				ECAFF7C51FF118660061755A /* WMTSubTagItem.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		EC8835071FE272B2009F69C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ECAFF7CA1FF120EB0061755A /* WMTTableViewCell.h */,
-				ECAFF7CB1FF120EB0061755A /* WMTTableViewCell.m */,
-				ECAFF7CC1FF120EB0061755A /* WMTTableViewCell.xib */,
+				ECAFF7E61FF1EF9E0061755A /* WMTSubTagcel.h */,
+				ECAFF7E71FF1EF9E0061755A /* WMTSubTagcel.m */,
+				ECAFF7E81FF1EF9E0061755A /* WMTSubTagcel.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,34 +273,11 @@
 		EC88350C1FE272B2009F69C4 /* Publish(发布) */ = {
 			isa = PBXGroup;
 			children = (
-				EC88350D1FE272B2009F69C4 /* Controller */,
-				EC88350E1FE272B2009F69C4 /* Model */,
-				EC88350F1FE272B2009F69C4 /* View */,
+				ECAFF7DC1FF154570061755A /* Controller */,
+				ECAFF7DA1FF154570061755A /* Model */,
+				ECAFF7DB1FF154570061755A /* View */,
 			);
 			path = "Publish(发布)";
-			sourceTree = "<group>";
-		};
-		EC88350D1FE272B2009F69C4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EC88351F1FE2745C009F69C4 /* WMTPublishViewController.h */,
-				EC8835201FE2745C009F69C4 /* WMTPublishViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EC88350E1FE272B2009F69C4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EC88350F1FE272B2009F69C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EC8835221FE2A452009F69C4 /* main */ = {
@@ -487,6 +405,72 @@
 			path = "启动图片";
 			sourceTree = "<group>";
 		};
+		ECAFF7CF1FF14F020061755A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECAFF7D61FF150500061755A /* WMTNewViewController.h */,
+				ECAFF7D71FF150510061755A /* WMTNewViewController.m */,
+				ECAFF7E01FF1DE140061755A /* WMTSubTagViewController.h */,
+				ECAFF7E11FF1DE140061755A /* WMTSubTagViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECAFF7D91FF153AB0061755A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECAFF7E31FF1E60F0061755A /* WMTSubTagItem.h */,
+				ECAFF7E41FF1E60F0061755A /* WMTSubTagItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECAFF7DA1FF154570061755A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECAFF7DB1FF154570061755A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECAFF7DC1FF154570061755A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC88351F1FE2745C009F69C4 /* WMTPublishViewController.h */,
+				EC8835201FE2745C009F69C4 /* WMTPublishViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECAFF7DD1FF154B00061755A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECAFF7DE1FF154B10061755A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECAFF7DF1FF154B10061755A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC8835191FE273FD009F69C4 /* WMTMeTiewController.h */,
+				EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -550,13 +534,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECAFF7B51FE95EC30061755A /* LaunchImage-700-568h@2x.png in Resources */,
+				ECAFF7EA1FF1EF9E0061755A /* WMTSubTagcel.xib in Resources */,
 				ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */,
 				EC7EDABE1FE2449B00C30DF1 /* LaunchScreen.storyboard in Resources */,
 				EC7EDAC81FE2555700C30DF1 /* Images.xcassets in Resources */,
 				ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */,
 				ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */,
 				EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */,
-				ECAFF7CE1FF120EB0061755A /* WMTTableViewCell.xib in Resources */,
 				ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */,
 				ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */,
 				ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -626,22 +610,22 @@
 				EC8835281FE2A4A2009F69C4 /* WMTTabBarController.m in Sources */,
 				ECAFF78A1FE688550061755A /* UIBarButtonItem+Item.m in Sources */,
 				ECAFF7BD1FEE26CD0061755A /* WMTADItem.m in Sources */,
-				ECAFF7CD1FF120EB0061755A /* WMTTableViewCell.m in Sources */,
 				EC8835211FE2745C009F69C4 /* WMTPublishViewController.m in Sources */,
 				EC8835121FE272B2009F69C4 /* main.m in Sources */,
+				ECAFF7E91FF1EF9E0061755A /* WMTSubTagcel.m in Sources */,
 				ECAFF79F1FE7ED1C0061755A /* WMTSettingViewController.m in Sources */,
 				EC88352C1FE2ACF4009F69C4 /* UIImage+Image.m in Sources */,
 				ECAFF7A91FE929100061755A /* WMTADViewController.m in Sources */,
 				EC8835181FE2738C009F69C4 /* WMTFriendTrendViewController.m in Sources */,
+				ECAFF7D81FF150510061755A /* WMTNewViewController.m in Sources */,
 				EC8835111FE272B2009F69C4 /* AppDelegate.m in Sources */,
 				EC8835151FE2736D009F69C4 /* WMTEsesenceViewController.m in Sources */,
-				EC88351E1FE27424009F69C4 /* WMTNewViewController.m in Sources */,
 				ECAFF7831FE54F5A0061755A /* WMTTabBar.m in Sources */,
 				ECAFF78D1FE7E1580061755A /* WMTNavigationViewController.m in Sources */,
 				EC88351B1FE273FD009F69C4 /* WMTMeTiewController.m in Sources */,
-				ECAFF7C61FF118660061755A /* WMTSubTagItem.m in Sources */,
+				ECAFF7E51FF1E60F0061755A /* WMTSubTagItem.m in Sources */,
 				ECAFF7861FE626A00061755A /* UIView+Frame.m in Sources */,
-				ECAFF7C31FF10F660061755A /* WMTSubTagViewController.m in Sources */,
+				ECAFF7E21FF1DE140061755A /* WMTSubTagViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

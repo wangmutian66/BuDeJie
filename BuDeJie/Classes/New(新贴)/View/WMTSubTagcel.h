@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WMTSubTagItem;
 @interface WMTSubTagcel : UITableViewCell
-
+@property(nonatomic,strong) WMTSubTagItem *item;
 @end
