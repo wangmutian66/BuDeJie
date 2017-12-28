@@ -40,6 +40,11 @@
 		ECAFF7E51FF1E60F0061755A /* WMTSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7E41FF1E60F0061755A /* WMTSubTagItem.m */; };
 		ECAFF7E91FF1EF9E0061755A /* WMTSubTagcel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7E71FF1EF9E0061755A /* WMTSubTagcel.m */; };
 		ECAFF7EA1FF1EF9E0061755A /* WMTSubTagcel.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7E81FF1EF9E0061755A /* WMTSubTagcel.xib */; };
+		ECAFF7F11FF345AF0061755A /* WMTFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF7F01FF345AF0061755A /* WMTFriendTrendViewController.xib */; };
+		ECAFF8051FF351020061755A /* WMTLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF8031FF351020061755A /* WMTLoginRegisterViewController.m */; };
+		ECAFF8061FF351020061755A /* WMTLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF8041FF351020061755A /* WMTLoginRegisterViewController.xib */; };
+		ECAFF8191FF367600061755A /* WMTLoginRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF8181FF367600061755A /* WMTLoginRegister.m */; };
+		ECAFF81D1FF367ED0061755A /* WMTLoginRegister.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF81C1FF367ED0061755A /* WMTLoginRegister.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +62,8 @@
 		EC88350B1FE272B2009F69C4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC8835131FE2736D009F69C4 /* WMTEsesenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTEsesenceViewController.h; sourceTree = "<group>"; };
 		EC8835141FE2736D009F69C4 /* WMTEsesenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTEsesenceViewController.m; sourceTree = "<group>"; };
-		EC8835161FE2738C009F69C4 /* WMTFriendTrendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTFriendTrendViewController.h; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTFriendTrendViewController.h"; sourceTree = SOURCE_ROOT; };
-		EC8835171FE2738C009F69C4 /* WMTFriendTrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTFriendTrendViewController.m; path = "BuDeJie/Classes/Esesence(精华)/Controller/WMTFriendTrendViewController.m"; sourceTree = SOURCE_ROOT; };
+		EC8835161FE2738C009F69C4 /* WMTFriendTrendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTFriendTrendViewController.h; path = "BuDeJie/Classes/FriendTrend(关注)/Controller/WMTFriendTrendViewController.h"; sourceTree = SOURCE_ROOT; };
+		EC8835171FE2738C009F69C4 /* WMTFriendTrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTFriendTrendViewController.m; path = "BuDeJie/Classes/FriendTrend(关注)/Controller/WMTFriendTrendViewController.m"; sourceTree = SOURCE_ROOT; };
 		EC8835191FE273FD009F69C4 /* WMTMeTiewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTMeTiewController.h; path = "BuDeJie/Classes/Me(我)/Controller/WMTMeTiewController.h"; sourceTree = SOURCE_ROOT; };
 		EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WMTMeTiewController.m; path = "BuDeJie/Classes/Me(我)/Controller/WMTMeTiewController.m"; sourceTree = SOURCE_ROOT; };
 		EC88351F1FE2745C009F69C4 /* WMTPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WMTPublishViewController.h; path = "BuDeJie/Classes/Publish(发布)/Controller/WMTPublishViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -99,6 +104,13 @@
 		ECAFF7E61FF1EF9E0061755A /* WMTSubTagcel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTSubTagcel.h; sourceTree = "<group>"; };
 		ECAFF7E71FF1EF9E0061755A /* WMTSubTagcel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTSubTagcel.m; sourceTree = "<group>"; };
 		ECAFF7E81FF1EF9E0061755A /* WMTSubTagcel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTSubTagcel.xib; sourceTree = "<group>"; };
+		ECAFF7F01FF345AF0061755A /* WMTFriendTrendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTFriendTrendViewController.xib; sourceTree = "<group>"; };
+		ECAFF8021FF351020061755A /* WMTLoginRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTLoginRegisterViewController.h; sourceTree = "<group>"; };
+		ECAFF8031FF351020061755A /* WMTLoginRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTLoginRegisterViewController.m; sourceTree = "<group>"; };
+		ECAFF8041FF351020061755A /* WMTLoginRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		ECAFF8171FF367600061755A /* WMTLoginRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTLoginRegister.h; sourceTree = "<group>"; };
+		ECAFF8181FF367600061755A /* WMTLoginRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTLoginRegister.m; sourceTree = "<group>"; };
+		ECAFF81C1FF367ED0061755A /* WMTLoginRegister.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTLoginRegister.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,34 +210,11 @@
 		EC8834FC1FE272B2009F69C4 /* FriendTrend(关注) */ = {
 			isa = PBXGroup;
 			children = (
-				EC8834FD1FE272B2009F69C4 /* Controller */,
-				EC8834FE1FE272B2009F69C4 /* Model */,
-				EC8834FF1FE272B2009F69C4 /* View */,
+				ECAFF7ED1FF344F20061755A /* Controller */,
+				ECAFF8161FF3670F0061755A /* Model */,
+				ECAFF8151FF3670F0061755A /* View */,
 			);
 			path = "FriendTrend(关注)";
-			sourceTree = "<group>";
-		};
-		EC8834FD1FE272B2009F69C4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EC8835161FE2738C009F69C4 /* WMTFriendTrendViewController.h */,
-				EC8835171FE2738C009F69C4 /* WMTFriendTrendViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EC8834FE1FE272B2009F69C4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		EC8834FF1FE272B2009F69C4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EC8835001FE272B2009F69C4 /* Me(我) */ = {
@@ -471,6 +460,36 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		ECAFF7ED1FF344F20061755A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC8835161FE2738C009F69C4 /* WMTFriendTrendViewController.h */,
+				EC8835171FE2738C009F69C4 /* WMTFriendTrendViewController.m */,
+				ECAFF7F01FF345AF0061755A /* WMTFriendTrendViewController.xib */,
+				ECAFF8021FF351020061755A /* WMTLoginRegisterViewController.h */,
+				ECAFF8031FF351020061755A /* WMTLoginRegisterViewController.m */,
+				ECAFF8041FF351020061755A /* WMTLoginRegisterViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECAFF8151FF3670F0061755A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECAFF8171FF367600061755A /* WMTLoginRegister.h */,
+				ECAFF8181FF367600061755A /* WMTLoginRegister.m */,
+				ECAFF81C1FF367ED0061755A /* WMTLoginRegister.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECAFF8161FF3670F0061755A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -533,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAFF8061FF351020061755A /* WMTLoginRegisterViewController.xib in Resources */,
 				ECAFF7B51FE95EC30061755A /* LaunchImage-700-568h@2x.png in Resources */,
 				ECAFF7EA1FF1EF9E0061755A /* WMTSubTagcel.xib in Resources */,
 				ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */,
@@ -541,7 +561,9 @@
 				ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */,
 				ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */,
 				EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */,
+				ECAFF7F11FF345AF0061755A /* WMTFriendTrendViewController.xib in Resources */,
 				ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */,
+				ECAFF81D1FF367ED0061755A /* WMTLoginRegister.xib in Resources */,
 				ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */,
 				ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				EC7EDAB91FE2449B00C30DF1 /* Main.storyboard in Resources */,
@@ -576,9 +598,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -607,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAFF8051FF351020061755A /* WMTLoginRegisterViewController.m in Sources */,
 				EC8835281FE2A4A2009F69C4 /* WMTTabBarController.m in Sources */,
 				ECAFF78A1FE688550061755A /* UIBarButtonItem+Item.m in Sources */,
 				ECAFF7BD1FEE26CD0061755A /* WMTADItem.m in Sources */,
@@ -624,6 +650,7 @@
 				ECAFF78D1FE7E1580061755A /* WMTNavigationViewController.m in Sources */,
 				EC88351B1FE273FD009F69C4 /* WMTMeTiewController.m in Sources */,
 				ECAFF7E51FF1E60F0061755A /* WMTSubTagItem.m in Sources */,
+				ECAFF8191FF367600061755A /* WMTLoginRegister.m in Sources */,
 				ECAFF7861FE626A00061755A /* UIView+Frame.m in Sources */,
 				ECAFF7E21FF1DE140061755A /* WMTSubTagViewController.m in Sources */,
 			);
@@ -764,7 +791,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8G984K4Z79;
+				DEVELOPMENT_TEAM = L8BDUH6ZF6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Classes/Other/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -780,7 +807,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8G984K4Z79;
+				DEVELOPMENT_TEAM = L8BDUH6ZF6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Classes/Other/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

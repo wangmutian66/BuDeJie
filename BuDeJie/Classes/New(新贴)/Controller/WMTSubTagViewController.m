@@ -11,9 +11,11 @@
 #import "MJExtension/MJExtension.h"
 #import "WMTSubTagItem.h"
 #import "WMTSubTagcel.h"
+#import "SVProgressHUD/SVProgressHUD.h"
 NSString * const ID=@"cell";
 @interface WMTSubTagViewController ()
 @property(nonatomic,strong) NSArray *subTags;
+@property(nonatomic,weak) AFHTTPSessionManager *mgr;
 @end
 
 @implementation WMTSubTagViewController
@@ -27,26 +29,46 @@ NSString * const ID=@"cell";
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"WMTSubTagcel" bundle:nil] forCellReuseIdentifier:ID];
     self.navigationItem.title=@"订阅号";
+    
+    //处理cell 分割线
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+//    self.tableView.layoutMargins=UIEdgeInsetsZero;
+    [SVProgressHUD showWithStatus:@"加载中"];
 }
+
+//界面消失调用
+-(void)viewWillDisappear:(BOOL)animated{
+    [SVProgressHUD dismiss];
+    //取消之前的请求
+    [_mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+}
+
 
 #pragma mark - 请求数据
 -(void)loadData{
+    //加载数据
+    
     //1.创建请求会话管理者
     AFHTTPSessionManager *mgr=[AFHTTPSessionManager manager];
+    _mgr=mgr;
     //2.拼接参数
     NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
     parameters[@"a"]=@"tag_recommend";
     parameters[@"action"]=@"sub";
     parameters[@"c"]=@"topic";
     //3.发送请求
+    
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //关闭load
+        [SVProgressHUD dismiss];
         //字典数组转模型数组
         NSLog(@"%@",responseObject);
         _subTags=[WMTSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
         //刷新表格
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
 
@@ -62,6 +84,7 @@ NSString * const ID=@"cell";
 
     
     WMTSubTagcel *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    //cell.layoutMargins=UIEdgeInsetsZero; 将此处代码修改到视图页
     //注意 如果cell 从 xib加载，一定要记得绑定标识符，否则没有循环利用
     //   方法一：identifier 里绑定
     // 方法二:注册 cell

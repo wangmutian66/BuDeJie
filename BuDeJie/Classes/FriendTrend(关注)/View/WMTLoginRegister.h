@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface WMTLoginRegister : UIView
+@property (weak, nonatomic) IBOutlet UIButton *btnlogin;
+
+
++(instancetype) loginView;
++(instancetype) registerView;
 
 @end

@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WMTLoginRegisterViewController">
             <connections>
+                <outlet property="middleView" destination="tlJ-x6-51y" id="4dq-UR-a2U"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +20,74 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="4w9-QD-jCa">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgp-eH-JO7" userLabel="TOP">
+                    <rect key="frame" x="0.0" y="20" width="375" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uP4-X7-CDB">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="login_close_icon"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="lld-Xl-ava"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grn-cS-lrs">
+                            <rect key="frame" x="285" y="1" width="90" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="立即注册">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected" title="已有账号?"/>
+                            <connections>
+                                <action selector="clickRegister:" destination="-1" eventType="touchUpInside" id="2Bb-fH-0Yo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Toa-H6-GFQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlJ-x6-51y" userLabel="Middle">
+                    <rect key="frame" x="0.0" y="95" width="375" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="bGa-Bd-JKW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plw-yG-7pM">
+                    <rect key="frame" x="0.0" y="527" width="375" height="120"/>
+                    <color key="backgroundColor" red="0.58846444009999999" green="1" blue="0.44176805349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="kkD-V9-wlh"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="plw-yG-7pM" secondAttribute="trailing" id="4Jd-DC-0ii"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jgp-eH-JO7" secondAttribute="trailing" id="4Sj-lE-UZi"/>
+                <constraint firstAttribute="bottom" secondItem="4w9-QD-jCa" secondAttribute="bottom" id="4Tp-Nb-lFv"/>
+                <constraint firstItem="jgp-eH-JO7" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Bij-UV-Ku7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="plw-yG-7pM" secondAttribute="bottom" constant="20" id="CXD-I8-oP7"/>
+                <constraint firstItem="4w9-QD-jCa" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="EEU-aE-Qwt"/>
+                <constraint firstItem="jgp-eH-JO7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="KUe-Ta-480"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="4w9-QD-jCa" secondAttribute="trailing" id="RkY-hZ-Do9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tlJ-x6-51y" secondAttribute="trailing" id="U0e-CM-KRk"/>
+                <constraint firstItem="tlJ-x6-51y" firstAttribute="top" secondItem="jgp-eH-JO7" secondAttribute="bottom" constant="40" id="brh-Z1-QSc"/>
+                <constraint firstItem="plw-yG-7pM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="id1-xC-tGx"/>
+                <constraint firstItem="4w9-QD-jCa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qhf-Ch-REy"/>
+                <constraint firstItem="tlJ-x6-51y" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="uq8-Cf-wCh"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="login_close_icon" width="16" height="16"/>
+        <image name="login_register_background" width="320" height="568"/>
+    </resources>
 </document>

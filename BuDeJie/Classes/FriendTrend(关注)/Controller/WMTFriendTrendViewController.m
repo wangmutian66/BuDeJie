@@ -7,12 +7,21 @@
 //
 
 #import "WMTFriendTrendViewController.h"
-
+#import "WMTLoginRegisterViewController.h"
 @interface WMTFriendTrendViewController ()
 
 @end
 
 @implementation WMTFriendTrendViewController
+
+
+//点击登录注册就会调用
+- (IBAction)clickLoginRegister:(id)sender {
+    //登录注册界面
+    WMTLoginRegisterViewController *loginVC=[[WMTLoginRegisterViewController alloc] init];
+    //loginVC
+    [self presentViewController:loginVC animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

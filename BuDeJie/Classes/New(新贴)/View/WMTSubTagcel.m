@@ -20,18 +20,23 @@
     _item = item1;
     _nameView.text=item1.theme_name;
     
+    
+    [self resoleNum];
+    
+    
+    [_IconView sd_setImageWithURL:[NSURL URLWithString:item1.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+}
+
+-(void) resoleNum{
     //判断有没有大于一万
-    NSString *numStr = [NSString stringWithFormat:@"%@人订阅",item1.sub_number] ;
-    NSInteger num=item1.sub_number.integerValue;
+    NSString *numStr = [NSString stringWithFormat:@"%@人订阅",_item.sub_number] ;
+    NSInteger num=_item.sub_number.integerValue;
     if(num > 10000){
         CGFloat numF=num/10000;
         numStr=[NSString stringWithFormat:@"%.1f万人订阅",numF];
         numStr=[numStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
     }
-    
-    
     _numberView.text=numStr;
-    [_IconView sd_setImageWithURL:[NSURL URLWithString:item1.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
 }
 
  //从xib加载就会调用 调用一次
@@ -42,6 +47,8 @@
     // 设置圆角
     _IconView.layer.cornerRadius=30;
     _IconView.layer.masksToBounds=YES;
+    // 处理cell 分割线
+    self.layoutMargins=UIEdgeInsetsZero;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

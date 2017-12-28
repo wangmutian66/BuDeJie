@@ -7,16 +7,32 @@
 //
 
 #import "WMTLoginRegisterViewController.h"
-
+#import "WMTLoginRegister.h"
 @interface WMTLoginRegisterViewController ()
+@property (weak, nonatomic) IBOutlet UIView *middleView;
 
 @end
 
 @implementation WMTLoginRegisterViewController
+- (IBAction)close:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)clickRegister:(UIButton *)sender {
+    sender.selected=!sender.selected;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+//    //创建登录的view
+//    WMTLoginRegister *loginView=[WMTLoginRegister loginView];
+//    // 添加到中间的view
+//    [self.middleView addSubview:loginView];
+    
+    //创建登录的view
+    WMTLoginRegister *registerView=[WMTLoginRegister registerView];
+    // 添加到中间的view
+    [self.middleView addSubview:registerView];
 }
 
 - (void)didReceiveMemoryWarning {

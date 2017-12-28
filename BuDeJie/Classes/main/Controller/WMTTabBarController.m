@@ -118,7 +118,7 @@
     
     
     UINavigationController *nav1=self.childViewControllers[1];
-    nav1.tabBarItem.title=@"精华";
+    nav1.tabBarItem.title=@"新帖";
     nav1.tabBarItem.image=[UIImage imageNamed:@"na2"];
     nav1.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na2hover"];
     
@@ -131,7 +131,7 @@
     
     
    UINavigationController *nav3=self.childViewControllers[2];
-    nav3.tabBarItem.title=@"精华";
+    nav3.tabBarItem.title=@"关注";
     nav3.tabBarItem.image=[UIImage imageNamed:@"na4"];
     nav3.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na4hover"];
     
