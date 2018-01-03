@@ -12,6 +12,7 @@
 #import "WMTSubTagItem.h"
 #import "WMTSubTagcel.h"
 #import "SVProgressHUD/SVProgressHUD.h"
+#import "MJRefresh.h"
 NSString * const ID=@"cell";
 @interface WMTSubTagViewController ()
 @property(nonatomic,strong) NSArray *subTags;
@@ -24,7 +25,7 @@ NSString * const ID=@"cell";
     [super viewDidLoad];
     
     //展示标签的数据 -> 请求数据（接口文档）
-    [self loadData];
+//    [self loadData];
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"WMTSubTagcel" bundle:nil] forCellReuseIdentifier:ID];
@@ -34,6 +35,18 @@ NSString * const ID=@"cell";
     self.tableView.separatorInset = UIEdgeInsetsZero;
 //    self.tableView.layoutMargins=UIEdgeInsetsZero;
     [SVProgressHUD showWithStatus:@"加载中"];
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+//    header.stateLabel.hidden = YES;
+    [header setTitle:@"再下拉一点就能刷新了" forState:MJRefreshStateIdle];
+    [header setTitle:@"放开即刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"加载中 ..." forState:MJRefreshStateRefreshing];
+    
+    self.tableView.mj_header = header;
+    self.tableView.mj_footer = footer;
+    [self.tableView.mj_header beginRefreshing];
+    
 }
 
 //界面消失调用
@@ -67,12 +80,20 @@ NSString * const ID=@"cell";
         _subTags=[WMTSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
         //刷新表格
         [self.tableView reloadData];
+        
+        
+ 
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
-
+-(void)loadNewData{
+    NSLog(@"走到这里了");
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows

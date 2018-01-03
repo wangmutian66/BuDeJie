@@ -45,6 +45,7 @@
 		ECAFF8061FF351020061755A /* WMTLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF8041FF351020061755A /* WMTLoginRegisterViewController.xib */; };
 		ECAFF8191FF367600061755A /* WMTLoginRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF8181FF367600061755A /* WMTLoginRegister.m */; };
 		ECAFF81D1FF367ED0061755A /* WMTLoginRegister.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAFF81C1FF367ED0061755A /* WMTLoginRegister.xib */; };
+		ECC2B8B51FFB897D0025BB42 /* WMTMeTiewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC2B8B41FFB897D0025BB42 /* WMTMeTiewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		ECAFF8171FF367600061755A /* WMTLoginRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTLoginRegister.h; sourceTree = "<group>"; };
 		ECAFF8181FF367600061755A /* WMTLoginRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTLoginRegister.m; sourceTree = "<group>"; };
 		ECAFF81C1FF367ED0061755A /* WMTLoginRegister.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTLoginRegister.xib; sourceTree = "<group>"; };
+		ECC2B8B41FFB897D0025BB42 /* WMTMeTiewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WMTMeTiewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +458,7 @@
 			children = (
 				EC8835191FE273FD009F69C4 /* WMTMeTiewController.h */,
 				EC88351A1FE273FD009F69C4 /* WMTMeTiewController.m */,
+				ECC2B8B41FFB897D0025BB42 /* WMTMeTiewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				EC7EDABE1FE2449B00C30DF1 /* LaunchScreen.storyboard in Resources */,
 				EC7EDAC81FE2555700C30DF1 /* Images.xcassets in Resources */,
 				ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */,
+				ECC2B8B51FFB897D0025BB42 /* WMTMeTiewController.storyboard in Resources */,
 				ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */,
 				EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */,
 				ECAFF7F11FF345AF0061755A /* WMTFriendTrendViewController.xib in Resources */,
@@ -599,6 +603,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -794,8 +799,9 @@
 				DEVELOPMENT_TEAM = L8BDUH6ZF6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Classes/Other/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.study1214.study.BuDeJie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study1214.BuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -810,8 +816,9 @@
 				DEVELOPMENT_TEAM = L8BDUH6ZF6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Classes/Other/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.study1214.study.BuDeJie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study1214.BuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

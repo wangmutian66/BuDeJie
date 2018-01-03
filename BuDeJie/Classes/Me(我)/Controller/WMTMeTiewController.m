@@ -8,8 +8,8 @@
 
 #import "WMTMeTiewController.h"
 #import "WMTSettingViewController.h"
-
-@interface WMTMeTiewController ()
+static NSString * const ID=@"cell";
+@interface WMTMeTiewController () <UICollectionViewDataSource>
 
 @end
 
@@ -17,11 +17,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
- 
+//     self.automaticallyAdjustsScrollViewInsets = NO; 
     [self setupNarBar];
+    // 设置tableView 底部视图
+    [self setupFootView];
+}
+
+
+-(void) setupFootView{
+    /*
+        1.初始化要设置流水布局
+        2.cell 必须要注册
+       3.cell 必须要自定义
+     */
+    //创建布局
+    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout alloc];
+    // 创建UICollectionView
+    UICollectionView *collectionView =[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:layout];
+    collectionView.backgroundColor=[UIColor redColor];
+    self.tableView.tableFooterView=collectionView;
+    collectionView.dataSource=self;
+    
+    //注册cell
+    
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ID];
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 10;
+}
+
+//-(UICollectionViewCell *) collection
+
+- (UICollectionViewCell *) collectionView:(UICollectionView *) collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath{
+     // 从缓存池取
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    cell.backgroundColor=[UIColor greenColor];
+    return cell;
+   
     
 }
+
 
 -(void)setupNarBar{
     
@@ -49,75 +85,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

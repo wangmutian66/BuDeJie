@@ -100,7 +100,10 @@
     WMTNavigationViewController *nav3=[[WMTNavigationViewController alloc] initWithRootViewController:friend];
     [self addChildViewController:nav3];
     // 我
-    WMTMeTiewController *me =[[WMTMeTiewController alloc] init];
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:NSStringFromClass([WMTMeTiewController class]) bundle:nil];
+    WMTMeTiewController *me = [storyboard instantiateInitialViewController];
+    // 
+    //WMTMeTiewController *me =[[WMTMeTiewController alloc] init];
     WMTNavigationViewController *nav4=[[WMTNavigationViewController alloc] initWithRootViewController:me];
     [self addChildViewController:nav4];
 }
@@ -134,6 +137,7 @@
     nav3.tabBarItem.title=@"关注";
     nav3.tabBarItem.image=[UIImage imageNamed:@"na4"];
     nav3.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na4hover"];
+    
     
     UINavigationController *nav4=self.childViewControllers[3];
     nav4.tabBarItem.title=@"我";
