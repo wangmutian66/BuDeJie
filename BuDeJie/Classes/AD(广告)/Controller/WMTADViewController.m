@@ -129,7 +129,7 @@
     parameters[@"code2"]=code2;
     //3.发送请求
     
-    //点击项目 进入 info 添加->App Transport Security Settings 在子下在添加 ->Allow Arbitrary Loads 配置写yes
+    //点击项目 进入 info 添加-> "App Transport Security Settings" 在子下在添加 -> "Allow Arbitrary Loads" 配置写yes
     /*
      AFURLResponseSerialization.m中修改代码就能解决：
      修改文件223行处
