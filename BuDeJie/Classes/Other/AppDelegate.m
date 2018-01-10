@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "WMTTabBarController.h"
+#import "WMTTabBarController.h"
 #import "WMTADViewController.h"
 
 //每次程序启动的时候进入广告界面
@@ -27,14 +27,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //1.创建一个windows
-    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //2.设置窗口根控制器
-//    WMTTabBarController *tarBarVc=[[WMTTabBarController alloc] init];
-    WMTADViewController *adVc = [[WMTADViewController alloc] init];
+    WMTTabBarController *tarBarVc=[[WMTTabBarController alloc] init];
+//    WMTADViewController *adVc = [[WMTADViewController alloc] init];
     
     
-    self.window.rootViewController =  adVc;
-//    self.window.rootViewController =  tarBarVc;
+//    self.window.rootViewController =  adVc;
+    self.window.rootViewController =  tarBarVc;
     //2.1 添加子控制器（5 个子控件） 自定义控制器 划分项目文件结构
     
     //3.显示窗口

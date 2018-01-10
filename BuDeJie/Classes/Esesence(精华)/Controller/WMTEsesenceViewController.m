@@ -23,7 +23,31 @@
     
     // Do any additional setup after loading the view.
     [self setupNarBar];
+    
+    //scrollview
+    [self setupScrollView];
+    
+    //标题栏
+    [self setupTitleView];
 }
+
+//滚动条是 tabBar  是叫scroll 的内容向下移动 64
+-(void) setupScrollView{
+    UIScrollView *scrollview = [[UIScrollView alloc] init];
+    scrollview.backgroundColor =[UIColor greenColor];
+    scrollview.frame= self.view.bounds;
+    [self.view addSubview:scrollview];
+}
+
+-(void)setupTitleView{
+    UIView *titleView = [[UIView alloc] init];
+    titleView.backgroundColor=[[UIColor whiteColor] colorWithAlphaComponent:0.5];
+//    titleView.backgroundColor =[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
+    titleView.alpha=0.5;
+    titleView.frame= CGRectMake(0, 64, self.view.wmt_width, 35);
+    [self.view addSubview:titleView];
+}
+
 
 -(void)setupNarBar{
     
