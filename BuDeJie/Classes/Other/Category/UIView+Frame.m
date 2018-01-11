@@ -45,4 +45,15 @@
     return self.frame.origin.x;
 }
 
+-(void)setWmt_centerX:(CGFloat) wmt_centerX{
+    CGPoint center = self.center;
+    center.x=wmt_centerX;
+    self.center=center;
+}
+-(CGFloat) wmt_centerX{
+    return self.center.x;
+}
+
+
+
 @end

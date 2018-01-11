@@ -15,6 +15,6 @@
 @property CGFloat wmt_width;
 @property CGFloat wmt_height;
 @property CGFloat wmt_x;
-@property CGFloat wmt_y;
-
+@property  CGFloat wmt_y;
+@property  CGFloat wmt_centerX;
 @end
