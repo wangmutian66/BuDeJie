@@ -17,7 +17,9 @@
 #import "WMTWordViewController.h"
 
 
-@interface WMTEsesenceViewController ()
+@interface WMTEsesenceViewController ()<UIScrollViewDelegate>
+//用来存放所有子控制器的view
+@property (nonatomic,weak) UIScrollView *scrollview;
 //标题栏
 @property (nonatomic,weak) UIView *titlesValue;
 //下划线
@@ -54,11 +56,16 @@
 
 //滚动条是 tabBar  是叫scroll 的内容向下移动 64
 -(void) setupScrollView{
+    self.automaticallyAdjustsScrollViewInsets = NO;
     UIScrollView *scrollview = [[UIScrollView alloc] init];
     scrollview.backgroundColor =[UIColor greenColor];
     scrollview.frame= self.view.bounds;
+    scrollview.showsHorizontalScrollIndicator = NO; //去掉横向滚动条
+    scrollview.showsVerticalScrollIndicator = NO; //去掉 纵向滚动条
+    scrollview.pagingEnabled = YES; //让可以分页
     [self.view addSubview:scrollview];
-    
+    self.scrollview=scrollview;
+    scrollview.delegate = self;
 //    for(NSInteger i = 0; i<5;i++){
 //        UITableView *tableview = [[UITableView alloc] init];
 ////        tableview.wmt_width = scrollview.wmt_width;
@@ -76,7 +83,7 @@
         //自控制器的view
         
         UIView *childView=childVc.view;
-        childView.frame=CGRectMake(scrollview.wmt_width*i, 54, scrollview.wmt_width, scrollview.wmt_height - 54);
+        childView.frame=CGRectMake(scrollview.wmt_width*i, 0, scrollview.wmt_width, scrollview.wmt_height);
         [scrollview addSubview:childView];
         
     }
@@ -142,8 +149,12 @@
         CGFloat centerx=titleButton.center.x;
 //        [titleButton titleForState:UIControlStateNormal]; 获取图片的文字
         self.titlesUnderline.wmt_width= [titleButton.currentTitle sizeWithFont:titleButton.titleLabel.font].width;
-        
         self.titlesUnderline.wmt_centerX = centerx;
+        //滚动到标题按钮对应的控制器
+        NSUInteger index=[self.titlesValue.subviews indexOfObject:titleButton];
+        CGFloat offsetx=self.scrollview.wmt_width * index;
+        self.scrollview.contentOffset=CGPointMake(offsetx, self.scrollview.contentOffset.y);
+        
     }];
     
 }
@@ -215,5 +226,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma 注册协议
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSUInteger index = scrollView.contentOffset.x / scrollView.wmt_width;
+    UIButton *button=self.titlesValue.subviews[index];
+    [self titleButtonClick:button];
+}
+
+
+
+
 
 @end
