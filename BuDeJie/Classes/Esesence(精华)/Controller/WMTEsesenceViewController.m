@@ -44,6 +44,11 @@
     
     //标题栏
     [self setupTitleView];
+    
+    
+    UIView *childVcView=self.childViewControllers[0].view;
+    childVcView.frame=CGRectMake(self.scrollview.wmt_width*0    , 0, self.scrollview.wmt_width, self.scrollview.wmt_height);
+    [self.scrollview addSubview:childVcView];
 }
 
 -(void)setupAllChildVcs{
@@ -78,6 +83,7 @@
 //        }
 //        [scrollview addSubview:tableview];
 //    }
+    /*
     for(NSInteger i =0;i<5;i++){
         UIViewController *childVc=self.childViewControllers[i];
         //自控制器的view
@@ -87,6 +93,7 @@
         [scrollview addSubview:childView];
         
     }
+    */
     
     scrollview.contentSize = CGSizeMake(5 *scrollview.wmt_width , 0);
     
@@ -128,6 +135,7 @@
     
     for (NSInteger i=0; i < count; i++) {
         UIButton *titleButton = [[UIButton alloc] init];
+        titleButton.tag=i;
         [titleButton addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.titlesValue addSubview:titleButton];
         [titleButton setTitleColor:[UIColor darkGrayColor]  forState:UIControlStateNormal];
@@ -145,6 +153,7 @@
     titleButton.selected=YES;
     self.previousClicked = titleButton;
     
+    NSUInteger indexs=titleButton.tag;
     [UIView animateWithDuration:0.25 animations:^{
         CGFloat centerx=titleButton.center.x;
 //        [titleButton titleForState:UIControlStateNormal]; 获取图片的文字
@@ -155,6 +164,11 @@
         CGFloat offsetx=self.scrollview.wmt_width * index;
         self.scrollview.contentOffset=CGPointMake(offsetx, self.scrollview.contentOffset.y);
         
+    } completion:^(BOOL finished) {
+        NSLog(@"============>%d",indexs);
+        UIView *childVcView=self.childViewControllers[indexs].view;
+        childVcView.frame=CGRectMake(self.scrollview.wmt_width*indexs, 0, self.scrollview.wmt_width, self.scrollview.wmt_height);
+        [self.scrollview addSubview:childVcView];
     }];
     
 }
@@ -227,15 +241,34 @@
 }
 */
 
-#pragma 注册协议
+#pragma 注册协议 结束减速 滚动禁止
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSUInteger index = scrollView.contentOffset.x / scrollView.wmt_width;
+    //方法一
     UIButton *button=self.titlesValue.subviews[index];
+    //方法二 通过tag 来获取 该方法的递归查找子控件和子控件的子控件 包括自己 小心tag 是0
+//    UIButton *button=[self.titlesValue viewWithTag:index];
+    
     [self titleButtonClick:button];
 }
 
 
 
-
-
 @end
+/*
+ viewWithTag 方法解析
+@implementation  UIView
+
+-(UIView *) viewWithTag:(NSInteger) tag{
+    //如果自己的控件符合要求就返回自己
+    if(self.tag== tag) return self;
+    for(UIView *subview in self.subviews){
+        UIView *resultView = [subview viewWithTag:tag];
+        if(resultView) return resultView;
+        
+    }
+}
+@end
+*/
+
+
