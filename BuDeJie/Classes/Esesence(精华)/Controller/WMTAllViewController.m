@@ -18,6 +18,14 @@
 /**上拉刷新刷新控件时候正在刷新**/
 @property(nonatomic,assign,getter=isFooterRefeshing) BOOL footerRefreshing;
 
+/**下拉刷新刷新控件时候正在刷新**/
+@property(nonatomic,assign,getter=isHeaderRefeshing) BOOL headerRefreshing;
+/**下拉刷新控件里面的文字**/
+@property(nonatomic,weak) UILabel *headerLabel;
+/**下拉刷新控件**/
+@property(nonatomic,weak) UIView *header;
+
+
 @end
 
 @implementation WMTAllViewController
@@ -35,6 +43,23 @@
 }
 
 -(void)setupRefresh{
+    
+    //header
+    UIView *header= [[UIView alloc] init];
+    header.frame=CGRectMake(0, -50, self.tableView.wmt_width, 50);
+    UILabel *headerLabel=[[UILabel alloc] init];
+    headerLabel.frame=header.bounds;
+    headerLabel.backgroundColor=[UIColor blueColor];
+    headerLabel.text=@"下拉可以刷新";
+    headerLabel.textColor=[UIColor whiteColor];
+    headerLabel.textAlignment = NSTextAlignmentCenter;
+    [header addSubview:headerLabel];
+    self.headerLabel=headerLabel;
+    self.header=header;
+//    self.tableView.tableHeaderView = header;
+    [self.tableView addSubview:header];
+    
+    //footer
     UIView *footer= [[UIView alloc] init];
     footer.frame=CGRectMake(0, 0, self.tableView.wmt_width, 35);
     UILabel *footerLabel=[[UILabel alloc] init];
@@ -79,8 +104,73 @@
     return cell;
 }
 
+//松开scrollView 时调用
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if(self.isHeaderRefeshing) return;
+    CGFloat offsetY= - (self.tableView.contentInset.top + self.header.wmt_height);
+    if(self.tableView.contentOffset.y <= offsetY){ //header 已经出现
+        self.headerLabel.text=@"正在刷新新数据...";
+        self.headerRefreshing=YES;
+        
+        //增加内边距
+        [UIView animateWithDuration:0.25 animations:^{
+            UIEdgeInsets insert = self.tableView.contentInset;
+            insert.top += self.header.wmt_height;
+            self.tableView.contentInset = insert;
+        }];
+        
+        //发送数据请求
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+           //假设服务器到这里回来
+            self.dataCount=7;
+            [self.tableView reloadData];
+            //结束刷新
+              //减小内边距
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                UIEdgeInsets insert = self.tableView.contentInset;
+                insert.top -= self.header.wmt_height;
+                self.tableView.contentInset = insert;
+//                self.headerLabel.text=@"下拉可以刷新";
+                self.headerRefreshing=NO;
+            }];
+            
+        });
+        
+        
+    }
+}
+
 #pragma mark - 代理方法
 -(void) scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    //处理header
+    [self dealHeader];
+    //处理footer下拉刷新
+    [self dealFoote];
+}
+
+/**
+ * 处理header
+ */
+-(void)dealHeader{
+    
+    if(self.isHeaderRefeshing) return;
+    //当我们的scrollView 偏移量y值 <= offsetY,代表header 已经完全出现
+    //99是顶部的高度 50 是 刷新的高度
+    CGFloat offsetY = -(99 + 50);
+    if(self.tableView.contentOffset.y <= offsetY){
+        self.headerLabel.text=@"松开立即刷新";
+    } else {
+        self.headerLabel.text=@"下拉可以刷新";
+    }
+    
+}
+
+/**
+ * 处理footer
+ */
+-(void)dealFoote{
     //还没有任何内容的时候
     if (self.tableView.contentSize.height == 0) return;
     
@@ -88,13 +178,13 @@
     if(self.isFooterRefeshing) return ;
     
     
-//    NSLog(@"%f",scrollView.contentOffset.y);
+    //    NSLog(@"%f",scrollView.contentOffset.y);
     //contentOffset.y = 内容高度 + 底部内边距  - frame高度
     CGFloat  ofsetY=self.tableView.contentSize.height + self.tableView.contentInset.bottom  - self.tableView.wmt_height;
     
     if(self.tableView.contentOffset.y >= ofsetY){
         self.footerRefreshing=YES;
-//        NSLog(@"走到这里了！！！！！！");
+        //        NSLog(@"走到这里了！！！！！！");
         self.footerLabel.text=@"正在加载更多数据....";
         self.footerLabel.backgroundColor=[UIColor blueColor];
         //时间是2秒钟
@@ -105,10 +195,10 @@
                            self.footerRefreshing=NO;
                            self.footerLabel.text=@"上拉加载更多";
                            self.footerLabel.textColor=[UIColor whiteColor];
-        });
+                       });
     }
     
-    
 }
+
 
 @end
