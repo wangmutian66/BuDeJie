@@ -26,3 +26,5 @@
 #define iphone5 (WMTScreenH==568)
 #define iphone4s (WMTScreenH==480)
 
+
+#define WMTAfwriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/apple/Desktop/%@.plist",filename]  atomically:YES];
