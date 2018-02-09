@@ -8,7 +8,7 @@
 
 #import "WMTTabBarController.h"
 #import "WMTMeTiewController.h"
-
+#import "XMGNewViewController.h"
 #import "WMTPublishViewController.h"
 #import "WMTEsesenceViewController.h"
 #import "WMTFriendTrendViewController.h"
@@ -86,9 +86,9 @@
     WMTNavigationViewController *nav=[[WMTNavigationViewController alloc] initWithRootViewController:essence];
     [self addChildViewController:nav];
     // 新帖
-//    WMTNewViewController *newVC =[[WMTNewViewController alloc] init];
-//    WMTNavigationViewController *nav1=[[WMTNavigationViewController alloc] initWithRootViewController:newVC];
-//    [self addChildViewController:nav1];
+    XMGNewViewController *newVC =[[XMGNewViewController alloc] init];
+    WMTNavigationViewController *nav1=[[WMTNavigationViewController alloc] initWithRootViewController:newVC];
+    [self addChildViewController:nav1];
     // 发布
 //    WMTPublishViewController *publish =[[WMTPublishViewController alloc] init];
     //UINavigationController *nav2=[[UINavigationController alloc] initWithRootViewController:publish];
@@ -120,10 +120,10 @@
     
     
     
-//    UINavigationController *nav1=self.childViewControllers[1];
-//    nav1.tabBarItem.title=@"新帖";
-//    nav1.tabBarItem.image=[UIImage imageNamed:@"na2"];
-//    nav1.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na2hover"];
+    UINavigationController *nav1=self.childViewControllers[1];
+    nav1.tabBarItem.title=@"新帖";
+    nav1.tabBarItem.image=[UIImage imageNamed:@"na2"];
+    nav1.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na2hover"];
     
 //     WMTPublishViewController *publish=self.childViewControllers[2];
 //    //publish.tabBarItem.title=@"发布";
@@ -133,13 +133,13 @@
     //publish.tabBarItem.imageInsets=UIEdgeInsetsMake(3,0,-3,0);
     
     
-   UINavigationController *nav3=self.childViewControllers[1];
+   UINavigationController *nav3=self.childViewControllers[2];
     nav3.tabBarItem.title=@"关注";
     nav3.tabBarItem.image=[UIImage imageNamed:@"na4"];
     nav3.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na4hover"];
     
     
-    UINavigationController *nav4=self.childViewControllers[2];
+    UINavigationController *nav4=self.childViewControllers[3];
     nav4.tabBarItem.title=@"我";
     nav4.tabBarItem.image=[UIImage imageNamed:@"na5"];
     nav4.tabBarItem.selectedImage=[UIImage imageOriginalWithName:@"na5hover"];

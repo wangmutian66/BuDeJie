@@ -14,10 +14,15 @@
 #import "WMTSubTagcel.h"
 #import "SVProgressHUD/SVProgressHUD.h"
 #import "WMTTopic.h"
+#import "WMTTopicCell.h"
+
 //#define baseurl @"http://api.budejie.com/api/api_open.php";
 NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
 @interface WMTAllViewController ()
-
+/** 当前最后一条帖子数据的描述信息，专门用来加载下一页数据 */
+@property (nonatomic, copy) NSString *maxtime;
+///**页码**/
+//@property(nonatomic,assign) NSUInteger page;
 /**所有帖子数据**/
 @property(nonatomic,strong) NSMutableArray *topics;
 /**数据量**/
@@ -40,6 +45,9 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
 @end
 
 @implementation WMTAllViewController
+
+/**cell 的重用标识**/
+static NSString * const WMTTopicCellId = @"WMTTopicCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,6 +80,9 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
     self.header=header;
 //    self.tableView.tableHeaderView = header;
     [self.tableView addSubview:header];
+    
+    //进来后自动刷新
+     [self headerBeginRefreshing];
     
     //footer
     UIView *footer= [[UIView alloc] init];
@@ -111,24 +122,25 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
     if(self.isHeaderRefeshing) return;
     CGFloat offsetY= - (self.tableView.contentInset.top + self.header.wmt_height);
     if(self.tableView.contentOffset.y <= offsetY){ //header 已经出现
-        self.headerLabel.text=@"正在刷新新数据...";
-        self.headerRefreshing=YES;
-        
-        //增加内边距
-        [UIView animateWithDuration:0.25 animations:^{
-            UIEdgeInsets insert = self.tableView.contentInset;
-            insert.top += self.header.wmt_height;
-            self.tableView.contentInset = insert;
-        }];
-        
-        //发送数据请求
-        [self loadNewTopic];
-        
-      
-      
-        
-        
+        [self headerBeginRefreshing];
     }
+}
+
+
+-(void) headerBeginRefreshing{
+    self.headerLabel.text=@"正在刷新新数据...";
+    self.headerRefreshing=YES;
+    
+    //增加内边距
+    [UIView animateWithDuration:0.25 animations:^{
+        UIEdgeInsets insert = self.tableView.contentInset;
+        insert.top += self.header.wmt_height;
+        self.tableView.contentInset = insert;
+    }];
+    
+    //发送数据请求
+    [self loadNewTopic];
+    
 }
 
 -(void)loadNewTopic{
@@ -140,6 +152,7 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
     parameters[@"c"]=@"data";
      parameters[@"type"]=@"31";//31 音频数据
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+        self.maxtime = responseObject[@"info"][@"maxtime"];
         
         //字典数组 - 》 模型数组
         self.topics = [WMTTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -170,20 +183,25 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"id";
-    // Configure the cell...
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-        cell.backgroundColor = [UIColor clearColor];
-    }
-     NSLog(@"%@",self.topics);
-    WMTTopic *topic=self.topics[indexPath.row];
-    
-    cell.textLabel.text=topic.name;
-    cell.detailTextLabel.text=topic.text;
+//    static NSString *ID = @"id";
+//    // Configure the cell...
+//
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    if(cell == nil){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+//        cell.backgroundColor = [UIColor clearColor];
+//    }
+//     NSLog(@"%@",self.topics);
+//    WMTTopic *topic=self.topics[indexPath.row];
+//
+//    cell.textLabel.text=topic.name;
+//    cell.detailTextLabel.text=topic.text;
+//    return cell;
+    WMTTopicCell *cell  = [tableView dequeueReusableCellWithIdentifier:WMTTopicCellId];
+    cell.topic=self.topics[indexPath.row];
+//    @"😀"; control + command + 空格 - > 弹出emoji 表情键盘
     return cell;
+    
 }
 //-(void)loadNewData{
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -275,8 +293,13 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
     parameters[@"a"]=@"list";
     parameters[@"c"]=@"data";
     parameters[@"type"]=@"31";//31 音频数据
+    parameters[@"maxtime"]=self.maxtime;
+    
+    
+//    self.page++;
+//    parameters[@"page"]=@(self.page);
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
-        
+         self.maxtime = responseObject[@"info"][@"maxtime"];
         //字典数组 - 》 模型数组
         NSArray *moretopics = [WMTTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:moretopics];
@@ -286,13 +309,14 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
         //结束刷新
         [self footerEndRefreshing];
         
+//        self.page = [parameters[@"page"] integerValue];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败！！！");
         [SVProgressHUD showErrorWithStatus:@"网络繁忙，稍后重试"];
         //结束刷新
         [self footerEndRefreshing];
-        
-        
+        //失败的时候来个
+//        self.page--;
     }];
 }
 -(void)footerEndRefreshing{

@@ -27,6 +27,9 @@
 		EC8835281FE2A4A2009F69C4 /* WMTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8835271FE2A4A2009F69C4 /* WMTTabBarController.m */; };
 		EC88352C1FE2ACF4009F69C4 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EC88352B1FE2ACF4009F69C4 /* UIImage+Image.m */; };
 		EC9E0990202B2E5E008E627E /* WMTTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E098F202B2E5E008E627E /* WMTTopic.m */; };
+		EC9E0993202C5FA9008E627E /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E0991202C5FA9008E627E /* XMGNewViewController.m */; };
+		EC9E0996202C6740008E627E /* WMTTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E0995202C6740008E627E /* WMTTopicCell.m */; };
+		EC9E09A4202C6912008E627E /* WMTTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9E09A3202C6912008E627E /* WMTTopicCell.xib */; };
 		ECAFF7831FE54F5A0061755A /* WMTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7821FE54F5A0061755A /* WMTTabBar.m */; };
 		ECAFF7861FE626A00061755A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7851FE626A00061755A /* UIView+Frame.m */; };
 		ECAFF78A1FE688550061755A /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAFF7891FE688550061755A /* UIBarButtonItem+Item.m */; };
@@ -93,6 +96,11 @@
 		EC88352B1FE2ACF4009F69C4 /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		EC9E098E202B2E5E008E627E /* WMTTopic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTopic.h; sourceTree = "<group>"; };
 		EC9E098F202B2E5E008E627E /* WMTTopic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTopic.m; sourceTree = "<group>"; };
+		EC9E0991202C5FA9008E627E /* XMGNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGNewViewController.m; path = "../../../../../../../Downloads/归档/代码/05-BuDeJie-/BuDeJie/Classes/New(新帖)/Controller/XMGNewViewController.m"; sourceTree = "<group>"; };
+		EC9E0992202C5FA9008E627E /* XMGNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGNewViewController.h; path = "../../../../../../../Downloads/归档/代码/05-BuDeJie-/BuDeJie/Classes/New(新帖)/Controller/XMGNewViewController.h"; sourceTree = "<group>"; };
+		EC9E0994202C6740008E627E /* WMTTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTopicCell.h; sourceTree = "<group>"; };
+		EC9E0995202C6740008E627E /* WMTTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTopicCell.m; sourceTree = "<group>"; };
+		EC9E09A3202C6912008E627E /* WMTTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTTopicCell.xib; sourceTree = "<group>"; };
 		ECAFF7811FE54F5A0061755A /* WMTTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTabBar.h; sourceTree = "<group>"; };
 		ECAFF7821FE54F5A0061755A /* WMTTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTabBar.m; sourceTree = "<group>"; };
 		ECAFF7841FE626A00061755A /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -167,6 +175,9 @@
 			children = (
 				EC46910D2005E69C0061C1AF /* WMTTitleButton.h */,
 				EC46910E2005E69C0061C1AF /* WMTTitleButton.m */,
+				EC9E0994202C6740008E627E /* WMTTopicCell.h */,
+				EC9E0995202C6740008E627E /* WMTTopicCell.m */,
+				EC9E09A3202C6912008E627E /* WMTTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +458,8 @@
 		ECAFF7CF1FF14F020061755A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EC9E0992202C5FA9008E627E /* XMGNewViewController.h */,
+				EC9E0991202C5FA9008E627E /* XMGNewViewController.m */,
 				ECAFF7E01FF1DE140061755A /* WMTSubTagViewController.h */,
 				ECAFF7E11FF1DE140061755A /* WMTSubTagViewController.m */,
 			);
@@ -615,6 +628,7 @@
 				ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */,
 				ECAFF81D1FF367ED0061755A /* WMTLoginRegister.xib in Resources */,
 				ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */,
+				EC9E09A4202C6912008E627E /* WMTTopicCell.xib in Resources */,
 				ECAFF7B81FE95EC30061755A /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				EC7EDAB91FE2449B00C30DF1 /* Main.storyboard in Resources */,
 				ECAFF7B91FE95EC30061755A /* LaunchImage.png in Resources */,
@@ -699,6 +713,7 @@
 				EC8835151FE2736D009F69C4 /* WMTEsesenceViewController.m in Sources */,
 				ECAFF7831FE54F5A0061755A /* WMTTabBar.m in Sources */,
 				EC4691122007505B0061C1AF /* WMTAllViewController.m in Sources */,
+				EC9E0996202C6740008E627E /* WMTTopicCell.m in Sources */,
 				EC469115200750770061C1AF /* WMTPictureViewController.m in Sources */,
 				EC9E0990202B2E5E008E627E /* WMTTopic.m in Sources */,
 				EC469118200751190061C1AF /* WMTViewViewController.m in Sources */,
@@ -709,6 +724,7 @@
 				ECAFF8191FF367600061755A /* WMTLoginRegister.m in Sources */,
 				ECAFF7861FE626A00061755A /* UIView+Frame.m in Sources */,
 				ECAFF7E21FF1DE140061755A /* WMTSubTagViewController.m in Sources */,
+				EC9E0993202C5FA9008E627E /* XMGNewViewController.m in Sources */,
 				EC46911E2007514B0061C1AF /* WMTWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
