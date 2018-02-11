@@ -51,8 +51,13 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor  = [UIColor colorWithRed:206 green:206 blue:206 alpha:1];
+    self.view.backgroundColor  = [UIColor colorWithRed:206/256.0 green:206/256.0 blue:206/256.0 alpha:1];
+//    self.view.backgroundColor =[UIColor grayColor];
     self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
+    //去掉cell 的分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
 //    self.dataCount=7;
     
     //注册cell

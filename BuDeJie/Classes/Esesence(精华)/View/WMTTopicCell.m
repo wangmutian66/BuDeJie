@@ -79,4 +79,13 @@
     }
 }
 
+
+//修改cell 之间的间距
+-(void)setFrame:(CGRect)frame{
+//    frame.origin.x +=10;
+//    frame.size.width -= 20;
+    frame.size.height  -=10;
+    [super setFrame: frame];
+}
+
 @end
