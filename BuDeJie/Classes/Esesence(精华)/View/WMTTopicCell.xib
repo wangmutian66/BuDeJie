@@ -14,7 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="221" id="gDV-nY-on9">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WMTTopicCellId" rowHeight="221" id="gDV-nY-on9" customClass="WMTTopicCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gDV-nY-on9" id="63B-0M-Gr9">
@@ -31,13 +31,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfc-R9-p3I" userLabel="昵称">
                         <rect key="frame" x="53" y="10" width="40" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea1-eO-mJj">
                         <rect key="frame" x="55" y="32" width="36" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwi-iK-ET5">
@@ -55,7 +55,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xw-aH-Hdm" userLabel="底部工具条">
-                        <rect key="frame" x="0.0" y="362" width="375" height="35"/>
+                        <rect key="frame" x="0.0" y="359" width="375" height="33"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-wD-nle">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -64,7 +64,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA8-bB-vus">
-                                <rect key="frame" x="0.0" y="0.0" width="94" height="35"/>
+                                <rect key="frame" x="0.0" y="0.0" width="94" height="33"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="顶" image="mainCellDing">
@@ -73,7 +73,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdW-f3-yDU">
-                                <rect key="frame" x="103" y="8" width="74" height="22"/>
+                                <rect key="frame" x="103" y="8" width="74" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="tCr-IQ-6F1"/>
                                 </constraints>
@@ -83,14 +83,14 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-oY-Czm">
-                                <rect key="frame" x="187" y="1" width="94" height="36"/>
+                                <rect key="frame" x="187" y="1" width="94" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="分享" image="mainCellShare">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRf-ze-sna">
-                                <rect key="frame" x="281" y="1" width="94" height="36"/>
+                                <rect key="frame" x="281" y="1" width="94" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="Qeg-d7-l0k"/>
                                 </constraints>
@@ -100,28 +100,27 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="oiz-OE-xKZ">
-                                <rect key="frame" x="94" y="0.0" width="1" height="35"/>
+                                <rect key="frame" x="94" y="0.0" width="1" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="trs-w1-erv"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="vrf-im-9BZ">
-                                <rect key="frame" x="187" y="0.0" width="1" height="35"/>
+                                <rect key="frame" x="187" y="0.0" width="1" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="3XZ-ws-n3x"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="XZs-9I-Zgg">
-                                <rect key="frame" x="187" y="0.0" width="1" height="35"/>
+                                <rect key="frame" x="187" y="0.0" width="1" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="JuF-t1-pWD"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DA8-bB-vus" firstAttribute="width" secondItem="3Xw-aH-Hdm" secondAttribute="width" multiplier="0.25" id="0fi-79-1en"/>
-                            <constraint firstAttribute="height" constant="35" id="2ec-Yn-9oZ"/>
                             <constraint firstItem="vrf-im-9BZ" firstAttribute="bottom" secondItem="XZs-9I-Zgg" secondAttribute="bottom" id="62b-hh-GK3"/>
                             <constraint firstItem="OdW-f3-yDU" firstAttribute="leading" secondItem="3Xw-aH-Hdm" secondAttribute="leading" constant="103" id="6YL-2X-NT4"/>
                             <constraint firstItem="jRu-wD-nle" firstAttribute="leading" secondItem="3Xw-aH-Hdm" secondAttribute="leading" id="Aje-Er-Tzg"/>
@@ -152,11 +151,14 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="Ea1-eO-mJj" firstAttribute="leading" secondItem="wdL-VY-eK7" secondAttribute="trailing" constant="10" id="3Ny-dq-SOj"/>
                     <constraint firstItem="wdL-VY-eK7" firstAttribute="top" secondItem="63B-0M-Gr9" secondAttribute="top" constant="10" id="6pN-IT-HqB"/>
                     <constraint firstItem="3Xw-aH-Hdm" firstAttribute="leading" secondItem="63B-0M-Gr9" secondAttribute="leading" id="B3n-Yl-M73"/>
                     <constraint firstItem="Ea1-eO-mJj" firstAttribute="centerX" secondItem="Nfc-R9-p3I" secondAttribute="centerX" id="B66-EI-N1y"/>
                     <constraint firstItem="wdL-VY-eK7" firstAttribute="leading" secondItem="63B-0M-Gr9" secondAttribute="leading" constant="10" id="F0n-Z2-ikK"/>
+                    <constraint firstAttribute="bottom" secondItem="3Xw-aH-Hdm" secondAttribute="bottom" constant="5.5" id="FS4-k3-WWg"/>
                     <constraint firstItem="Ea1-eO-mJj" firstAttribute="top" secondItem="Nfc-R9-p3I" secondAttribute="bottom" constant="2" id="PLY-uN-vNF"/>
                     <constraint firstItem="UBL-2W-Dmd" firstAttribute="top" secondItem="wdL-VY-eK7" secondAttribute="bottom" constant="17" id="VcK-Dw-BNK"/>
                     <constraint firstItem="Nfc-R9-p3I" firstAttribute="leading" secondItem="wdL-VY-eK7" secondAttribute="trailing" constant="8" symbolic="YES" id="aq1-Ic-PVb"/>
@@ -165,10 +167,19 @@
                     <constraint firstAttribute="trailing" secondItem="xwi-iK-ET5" secondAttribute="trailing" constant="10" id="s07-PS-EEZ"/>
                     <constraint firstItem="xwi-iK-ET5" firstAttribute="top" secondItem="63B-0M-Gr9" secondAttribute="top" constant="10" id="sZG-m2-4Ze"/>
                     <constraint firstItem="Nfc-R9-p3I" firstAttribute="top" secondItem="wdL-VY-eK7" secondAttribute="top" id="tbk-Jj-RFn"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3Xw-aH-Hdm" secondAttribute="bottom" constant="-10" id="voE-M9-eAq"/>
                     <constraint firstAttribute="trailing" secondItem="UBL-2W-Dmd" secondAttribute="trailing" constant="10" id="wxm-jc-EhY"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="caiButton" destination="OdW-f3-yDU" id="UTS-sa-A4Z"/>
+                <outlet property="commentButton" destination="bRf-ze-sna" id="gEd-y2-gV0"/>
+                <outlet property="createdAtLabel" destination="Ea1-eO-mJj" id="OhG-yP-awH"/>
+                <outlet property="dingButton" destination="DA8-bB-vus" id="nWg-Rv-bNk"/>
+                <outlet property="nameLabel" destination="Nfc-R9-p3I" id="Anm-B9-nDl"/>
+                <outlet property="profileImageView" destination="wdL-VY-eK7" id="k4b-db-99A"/>
+                <outlet property="repostButton" destination="XIy-oY-Czm" id="VqD-9X-sh4"/>
+                <outlet property="text_label" destination="UBL-2W-Dmd" id="e3m-JC-khb"/>
+            </connections>
             <point key="canvasLocation" x="28.5" y="111"/>
         </tableViewCell>
     </objects>

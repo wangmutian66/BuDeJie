@@ -12,7 +12,7 @@
 /**用户的名字**/
 @property(nonatomic,copy) NSString *name;
 /**用户的头像**/
-@property(nonatomic,copy) NSString *profile_name;
+@property(nonatomic,copy) NSString *profile_image;
 /**帖子文字内容**/
 @property(nonatomic,copy) NSString *text;
 /**帖子审核通过的时间**/

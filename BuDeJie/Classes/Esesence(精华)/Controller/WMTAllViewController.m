@@ -51,8 +51,14 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor  = [UIColor colorWithRed:206 green:206 blue:206 alpha:1];
     self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
-    self.dataCount=7;
+//    self.dataCount=7;
+    
+    //注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WMTTopicCell class]) bundle:nil] forCellReuseIdentifier:WMTTopicCellId];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -60,7 +66,7 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:nil object:nil];
-    
+    self.tableView.rowHeight = 300;
     [self setupRefresh];
 }
 
@@ -198,6 +204,9 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
 //    cell.detailTextLabel.text=topic.text;
 //    return cell;
     WMTTopicCell *cell  = [tableView dequeueReusableCellWithIdentifier:WMTTopicCellId];
+//    if(cell  == nil){
+//        cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([WMTTopicCell class]) owner:nil options:nil].firstObject;
+//    }
     cell.topic=self.topics[indexPath.row];
 //    @"😀"; control + command + 空格 - > 弹出emoji 表情键盘
     return cell;
@@ -323,5 +332,10 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     self.footerRefreshing=NO;
     self.footerLabel.text=@"上拉加载更多";
     self.footerLabel.textColor=[UIColor whiteColor];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 380;
 }
 @end
