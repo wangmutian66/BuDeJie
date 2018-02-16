@@ -150,6 +150,34 @@
                             <constraint firstItem="jRu-wD-nle" firstAttribute="top" secondItem="3Xw-aH-Hdm" secondAttribute="top" id="wuK-f9-9U7"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1Y-UA-ZJQ" userLabel="最热评论整体">
+                        <rect key="frame" x="10" y="310" width="355" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAH-F0-ETi" userLabel="标题">
+                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                <color key="backgroundColor" red="0.33024088540000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-15-2mP" userLabel="内容">
+                                <rect key="frame" x="0.0" y="20.5" width="355" height="20.5"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.64421993730000005" blue="0.64661906800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51958550349999999" green="1" blue="0.18901909720000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0fL-15-2mP" secondAttribute="trailing" id="7E3-Ci-yVU"/>
+                            <constraint firstItem="WAH-F0-ETi" firstAttribute="leading" secondItem="r1Y-UA-ZJQ" secondAttribute="leading" id="A6I-rl-fq6"/>
+                            <constraint firstItem="0fL-15-2mP" firstAttribute="leading" secondItem="r1Y-UA-ZJQ" secondAttribute="leading" id="FuE-9Q-fLC"/>
+                            <constraint firstItem="0fL-15-2mP" firstAttribute="top" secondItem="WAH-F0-ETi" secondAttribute="bottom" id="feg-QW-tqd"/>
+                            <constraint firstAttribute="bottom" secondItem="0fL-15-2mP" secondAttribute="bottom" id="gPn-kV-WdZ"/>
+                            <constraint firstItem="WAH-F0-ETi" firstAttribute="top" secondItem="r1Y-UA-ZJQ" secondAttribute="top" id="nNn-zn-kc1"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -161,9 +189,12 @@
                     <constraint firstAttribute="bottom" secondItem="3Xw-aH-Hdm" secondAttribute="bottom" constant="5.5" id="FS4-k3-WWg"/>
                     <constraint firstItem="Ea1-eO-mJj" firstAttribute="top" secondItem="Nfc-R9-p3I" secondAttribute="bottom" constant="2" id="PLY-uN-vNF"/>
                     <constraint firstItem="UBL-2W-Dmd" firstAttribute="top" secondItem="wdL-VY-eK7" secondAttribute="bottom" constant="17" id="VcK-Dw-BNK"/>
+                    <constraint firstItem="r1Y-UA-ZJQ" firstAttribute="trailing" secondItem="UBL-2W-Dmd" secondAttribute="trailing" id="Vme-LV-YPS"/>
                     <constraint firstItem="Nfc-R9-p3I" firstAttribute="leading" secondItem="wdL-VY-eK7" secondAttribute="trailing" constant="8" symbolic="YES" id="aq1-Ic-PVb"/>
+                    <constraint firstItem="3Xw-aH-Hdm" firstAttribute="top" secondItem="r1Y-UA-ZJQ" secondAttribute="bottom" constant="8" id="c0b-0S-ndG"/>
                     <constraint firstItem="3Xw-aH-Hdm" firstAttribute="centerX" secondItem="UBL-2W-Dmd" secondAttribute="centerX" id="cPE-eD-MKF"/>
                     <constraint firstItem="UBL-2W-Dmd" firstAttribute="leading" secondItem="63B-0M-Gr9" secondAttribute="leading" constant="10" id="ffx-Ae-RCL"/>
+                    <constraint firstItem="r1Y-UA-ZJQ" firstAttribute="leading" secondItem="UBL-2W-Dmd" secondAttribute="leading" id="rOt-aF-IrX"/>
                     <constraint firstAttribute="trailing" secondItem="xwi-iK-ET5" secondAttribute="trailing" constant="10" id="s07-PS-EEZ"/>
                     <constraint firstItem="xwi-iK-ET5" firstAttribute="top" secondItem="63B-0M-Gr9" secondAttribute="top" constant="10" id="sZG-m2-4Ze"/>
                     <constraint firstItem="Nfc-R9-p3I" firstAttribute="top" secondItem="wdL-VY-eK7" secondAttribute="top" id="tbk-Jj-RFn"/>
@@ -179,6 +210,7 @@
                 <outlet property="profileImageView" destination="wdL-VY-eK7" id="k4b-db-99A"/>
                 <outlet property="repostButton" destination="XIy-oY-Czm" id="VqD-9X-sh4"/>
                 <outlet property="text_label" destination="UBL-2W-Dmd" id="e3m-JC-khb"/>
+                <outlet property="topCmtView" destination="r1Y-UA-ZJQ" id="XF3-CR-MV2"/>
             </connections>
             <point key="canvasLocation" x="28.5" y="111"/>
         </tableViewCell>

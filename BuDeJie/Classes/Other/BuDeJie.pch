@@ -28,3 +28,6 @@
 
 
 #define WMTAfwriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/apple/Desktop/%@.plist",filename]  atomically:YES];
+
+
+#define WMTMarn  10

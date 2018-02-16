@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 
 
 @end
@@ -62,10 +63,24 @@
     [self setupButtonTitle:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton number:topic.commit placeholder:@"评论"];
     
+    
 //    [self chuliwan:topic.ding];
     self.nameLabel.text = topic.name;
     self.createdAtLabel.text=topic.passtime;
     self.text_label.text = topic.text;
+    //最热评论
+    if(topic.top_cmt.count){ // 有最热评论
+        self.topCmtView.hidden=NO;
+    }else{ //没有
+        self.topCmtView.hidden = YES; 
+    }
+    
+    
+    //中间内容
+    
+    
+    
+    
     
 }
 

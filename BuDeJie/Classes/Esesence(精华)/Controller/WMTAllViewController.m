@@ -19,6 +19,8 @@
 //#define baseurl @"http://api.budejie.com/api/api_open.php";
 NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
 @interface WMTAllViewController ()
+/** 用来缓存 cell 高度 （key ：模型, value:cell 高度）**/
+@property (nonatomic,strong) NSMutableDictionary *cellHeightDict;
 /** 当前最后一条帖子数据的描述信息，专门用来加载下一页数据 */
 @property (nonatomic, copy) NSString *maxtime;
 ///**页码**/
@@ -49,6 +51,13 @@ NSString const *baseURL =@"http://api.budejie.com/api/api_open.php";
 /**cell 的重用标识**/
 static NSString * const WMTTopicCellId = @"WMTTopicCellId";
 
+-(NSMutableDictionary *)cellHeightDict{
+    if(!_cellHeightDict){
+        _cellHeightDict = [NSMutableDictionary dictionary];
+    }
+    return _cellHeightDict;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor  = [UIColor colorWithRed:206/256.0 green:206/256.0 blue:206/256.0 alpha:1];
@@ -71,7 +80,7 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:nil object:nil];
-    self.tableView.rowHeight = 300;
+//    self.tableView.rowHeight = 300;
     [self setupRefresh];
 }
 
@@ -174,6 +183,8 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
         [self headEndRefreshing];
 //        NSLog(@"请求成功！！！");
         WMTAfwriteToPlist(@"1111d")
+        //防止字典里的数据越来越多 清除之前计算的高度
+        [self.cellHeightDict removeAllObjects];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败！！！");
         [SVProgressHUD showErrorWithStatus:@"网络繁忙，稍后重试"];
@@ -339,8 +350,43 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     self.footerLabel.textColor=[UIColor whiteColor];
 }
 
+#pragma 代理方法
+/*
+ 这个方法的特点
+ 1.默认情况下
+  1》. 每次刷新表格的时候，有多少数据，这个方法就一次性调用多少次 （比如有100条数据，每次reloadData 这个方法就会一次性调用100次）
+  2》每次cell进入屏幕范围内，就会调用一次这个方法
+ */
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 380;
+    WMTTopic *top = self.topics[indexPath.row];
+    //用模型内存地址做key
+    NSString *key = [NSString stringWithFormat:@"%p",top];
+    CGFloat cellHeight  = [self.cellHeightDict[key] doubleValue];
+    
+    if(cellHeight == 0){
+        //    CGFloat cellHeight = 0;
+        
+            //文字的y值
+            cellHeight += 75;
+            //文字的高度 MAXFLOAT 表示不限制高度
+            CGSize textMaxSize = CGSizeMake(WMTScreenW - 2 * WMTMarn, MAXFLOAT);
+        //  这个方法是老方法 oc 已经不推荐使用了    cellHeight += [top.text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:textMaxSize].height + WMTMarn;
+            cellHeight += [top.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height + WMTMarn;
+        //    [top.text sizeWithFont:[UIFont systemFontOfSize:15]].height; //只能算出单行的高度
+            //工具条
+            cellHeight += 35;
+            NSLog(@"%zd - %f",indexPath.row,cellHeight);
+            cellHeight += WMTMarn;
+        //存储高度
+//            self.cellHeightDict[top]=@{cellHeight};
+       
+        [self.cellHeightDict setObject:@(cellHeight) forKey:key];
+        
+        
+    }
+    
+    
+    return cellHeight;
 }
 @end

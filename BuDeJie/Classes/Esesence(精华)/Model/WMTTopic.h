@@ -25,4 +25,6 @@
 @property(nonatomic,assign) NSInteger repost;
 /**评论数量**/
 @property(nonatomic,assign) NSInteger commit;
+/**最热评论**/
+@property(nonatomic,strong) NSArray *top_cmt;
 @end
