@@ -27,4 +27,14 @@
 @property(nonatomic,assign) NSInteger commit;
 /**最热评论**/
 @property(nonatomic,strong) NSArray *top_cmt;
+/** 帖子的类型 10为图片 29为段子 31为音频 41为视频 */
+@property (nonatomic, assign) NSInteger type;
+
+/**宽度**/
+@property(nonatomic,assign) NSInteger width;
+/**高度**/
+@property(nonatomic,assign) NSInteger height;
+
+/**中间内容的frame**/
+@property(nonatomic,assign) CGRect middleFrame;
 @end

@@ -170,7 +170,7 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
      NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
     parameters[@"a"]=@"list";
     parameters[@"c"]=@"data";
-     parameters[@"type"]=@"31";//31 音频数据
+     parameters[@"type"]=@"1";//31 音频数据
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -317,7 +317,7 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     NSMutableDictionary *parameters=[NSMutableDictionary dictionary];
     parameters[@"a"]=@"list";
     parameters[@"c"]=@"data";
-    parameters[@"type"]=@"31";//31 音频数据
+    parameters[@"type"]=@"1";//31 音频数据
     parameters[@"maxtime"]=self.maxtime;
     
     
@@ -366,21 +366,53 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     
     if(cellHeight == 0){
         //    CGFloat cellHeight = 0;
+    
+        //文字的y值
+        cellHeight += 75;
+        //文字的高度 MAXFLOAT 表示不限制高度
+        CGSize textMaxSize = CGSizeMake(WMTScreenW - 2 * WMTMarn, MAXFLOAT);
+    //  这个方法是老方法 oc 已经不推荐使用了    cellHeight += [top.text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:textMaxSize].height + WMTMarn;
+        cellHeight += [top.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]} context:nil].size.height + WMTMarn;
+    //    [top.text sizeWithFont:[UIFont systemFontOfSize:15]].height; //只能算出单行的高度
         
-            //文字的y值
-            cellHeight += 75;
-            //文字的高度 MAXFLOAT 表示不限制高度
-            CGSize textMaxSize = CGSizeMake(WMTScreenW - 2 * WMTMarn, MAXFLOAT);
-        //  这个方法是老方法 oc 已经不推荐使用了    cellHeight += [top.text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:textMaxSize].height + WMTMarn;
-            cellHeight += [top.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height + WMTMarn;
-        //    [top.text sizeWithFont:[UIFont systemFontOfSize:15]].height; //只能算出单行的高度
-            //工具条
-            cellHeight += 35;
-            NSLog(@"%zd - %f",indexPath.row,cellHeight);
-            cellHeight += WMTMarn;
-        //存储高度
+        //中间内容的高度
+//        NSLog()
+        if(top.type != 29){ //不等于段子类型 （图片，声音，视频）
+    
+        
+            CGFloat middleW = WMTScreenW - 2 * WMTMarn;
+            CGFloat middleH = middleW  *  top.height /top.width;
+            CGFloat middleY = cellHeight;
+            CGFloat middleX =WMTMarn;
+            
+            top.middleFrame=CGRectMake(middleX, middleY, middleW, middleH);
+            cellHeight += middleH + WMTMarn;
+        }
+        
+    
+        
+        //最热评论
+        if(top.top_cmt.count){ //有最新评论
+            //标题
+            cellHeight += 21;
+            //内容
+            NSDictionary *cmt = top.top_cmt.firstObject;
+            NSString *connect = cmt[@"content"];
+            NSString *username = cmt[@"user"][@"username"];
+            if(connect.length == 0){
+                connect = @"[语音评论]";
+            }
+           NSString  *textSTR= [NSString stringWithFormat:@"%@:%@",username,connect];
+            cellHeight += [textSTR boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin  attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]} context:nil].size.height + WMTMarn;
+            
+        }
+        
+        //工具条
+        cellHeight += 35;
+        NSLog(@"%zd - %f",indexPath.row,cellHeight);
+        cellHeight += WMTMarn;
+    //存储高度
 //            self.cellHeightDict[top]=@{cellHeight};
-       
         [self.cellHeightDict setObject:@(cellHeight) forKey:key];
         
         

@@ -151,7 +151,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1Y-UA-ZJQ" userLabel="最热评论整体">
-                        <rect key="frame" x="10" y="310" width="355" height="41"/>
+                        <rect key="frame" x="10" y="254" width="355" height="97"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAH-F0-ETi" userLabel="标题">
                                 <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
@@ -161,9 +161,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论最热评论" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-15-2mP" userLabel="内容">
-                                <rect key="frame" x="0.0" y="20.5" width="355" height="20.5"/>
+                                <rect key="frame" x="0.0" y="20.5" width="355" height="76.5"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.64421993730000005" blue="0.64661906800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -210,6 +210,7 @@
                 <outlet property="profileImageView" destination="wdL-VY-eK7" id="k4b-db-99A"/>
                 <outlet property="repostButton" destination="XIy-oY-Czm" id="VqD-9X-sh4"/>
                 <outlet property="text_label" destination="UBL-2W-Dmd" id="e3m-JC-khb"/>
+                <outlet property="topCmtLabel" destination="0fL-15-2mP" id="9vU-Or-Dev"/>
                 <outlet property="topCmtView" destination="r1Y-UA-ZJQ" id="XF3-CR-MV2"/>
             </connections>
             <point key="canvasLocation" x="28.5" y="111"/>

@@ -9,6 +9,9 @@
 #import "UIView+Frame.h"
 
 @implementation UIView (Frame)
++(instancetype)wmt_viewFromXib{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
 -(void) setWmt_width:(CGFloat)wmt_width{
     CGRect rect=self.frame;
     rect.size.width=wmt_width;

@@ -10,6 +10,12 @@
 #import "WMTTopicCell.h"
 #import "WMTTopic.h"
 #import "UIImageView+WebCache.h"
+#import "WMTTopicVideoView.h"
+#import "WMTTopicVoiceView.h"
+#import "WMTTopicPictureView.h"
+
+
+
 @interface WMTTopicCell()
 //控件的命名 - > 功能 + 控件类型
 //nameLabel
@@ -24,11 +30,46 @@
 
 @property (weak, nonatomic) IBOutlet UIView *topCmtView;
 
+@property (weak, nonatomic) IBOutlet UILabel *topCmtLabel;
+
+/**图片控件**/
+@property(nonatomic,weak) WMTTopicPictureView *pictureView;
+/**声音控件**/
+@property(nonatomic,weak) WMTTopicVoiceView *voiceView;
+/**视频控件**/
+@property(nonatomic,weak) WMTTopicVideoView *videoView;
 
 @end
 
 @implementation WMTTopicCell
 
+-(WMTTopicPictureView *) pictureView{
+    if(!_pictureView){
+       
+        WMTTopicPictureView *pictureView =  [WMTTopicPictureView wmt_viewFromXib];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
+-(WMTTopicVoiceView *) voiceView{
+    if(!_voiceView){
+        WMTTopicVoiceView *voiceView = [WMTTopicVoiceView wmt_viewFromXib];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+-(WMTTopicVideoView *) videoView{
+    if(!_videoView){
+        WMTTopicVideoView *videoView = [WMTTopicVideoView wmt_viewFromXib];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
 //走的是xib 肯定走 这个方法 awakeFromNib
 -(void) awakeFromNib
 {
@@ -42,7 +83,7 @@
     _topic = topic;
     
 
-    NSLog(@"=========>%@",topic.profile_image);
+//    NSLog(@"=========>%@",topic.profile_image);
     //头像图片
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"setup-head-default"]];
     //设置圆角
@@ -71,13 +112,43 @@
     //最热评论
     if(topic.top_cmt.count){ // 有最热评论
         self.topCmtView.hidden=NO;
+        NSDictionary *cmt = topic.top_cmt.firstObject;
+        NSString *connect = cmt[@"content"];
+        if(connect.length == 0){
+            connect = @"[语音评论]";
+        }
+        NSString *username = cmt[@"user"][@"username"];
+        self.topCmtLabel.text= [NSString stringWithFormat:@"%@:%@",username,connect];
+        
     }else{ //没有
         self.topCmtView.hidden = YES; 
     }
     
     
-    //中间内容
-    
+    //中间内容 09 - 07
+    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+//    UIView *view = [[UIView alloc] init];
+//    view.frame = CGRectMake(0, 0,100, 100);
+//    view.backgroundColor = [UIColor redColor];
+//    [self.contentView addSubview: view];;
+    if(topic.type == 10){ //图片
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden= YES;
+        self.videoView.hidden=YES;
+    }else if(topic.type == 31){
+
+        self.pictureView.hidden=YES;
+        self.voiceView.hidden = NO;
+        self.videoView.hidden=YES;
+    }else if(topic.type == 41){
+        self.pictureView.hidden=YES;
+        self.voiceView.hidden= YES;
+        self.videoView.hidden = NO;
+    }else if(topic.type == 29){
+        self.pictureView.hidden=YES;
+        self.voiceView.hidden= YES;
+        self.videoView.hidden=YES;
+    }
     
     
     
@@ -103,4 +174,15 @@
     [super setFrame: frame];
 }
 
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+    if(self.topic.type == 10){ //图片
+        self.pictureView.frame = self.topic.middleFrame;
+    }else if(self.topic.type == 31){
+        self.voiceView.frame = self.topic.middleFrame;
+    }else if(self.topic.type == 41){
+        self.videoView.frame = self.topic.middleFrame;
+    }
+}
 @end

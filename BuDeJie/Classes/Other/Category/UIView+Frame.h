@@ -17,4 +17,6 @@
 @property CGFloat wmt_x;
 @property  CGFloat wmt_y;
 @property  CGFloat wmt_centerX;
+
++(instancetype) wmt_viewFromXib;
 @end

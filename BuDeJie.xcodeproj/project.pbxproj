@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E91F099290C2CC2F51694F72 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CC81A6596A008C36C8C396 /* libPods-BuDeJie.a */; };
+		EC37E1C82036AC4100E76C8D /* WMTTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC37E1C72036AC4100E76C8D /* WMTTopicVideoView.m */; };
+		EC37E1CA2036AC9300E76C8D /* WMTTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC37E1C92036AC9300E76C8D /* WMTTopicVideoView.xib */; };
+		EC37E1CD2036AD3000E76C8D /* WMTTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC37E1CC2036AD3000E76C8D /* WMTTopicVoiceView.m */; };
+		EC37E1D02036AD5600E76C8D /* WMTTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC37E1CF2036AD5600E76C8D /* WMTTopicPictureView.m */; };
+		EC37E1D32036ADBE00E76C8D /* WMTTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC37E1D12036ADBD00E76C8D /* WMTTopicPictureView.xib */; };
+		EC37E1D42036ADBE00E76C8D /* WMTTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC37E1D22036ADBE00E76C8D /* WMTTopicVoiceView.xib */; };
 		EC46910F2005E69C0061C1AF /* WMTTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC46910E2005E69C0061C1AF /* WMTTitleButton.m */; };
 		EC4691122007505B0061C1AF /* WMTAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4691112007505B0061C1AF /* WMTAllViewController.m */; };
 		EC469115200750770061C1AF /* WMTPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC469114200750770061C1AF /* WMTPictureViewController.m */; };
@@ -61,6 +67,15 @@
 		41A5EAF42AA0A5BB79BF5728 /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		A2CC81A6596A008C36C8C396 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB347DF04590F1479D8E756 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		EC37E1C62036AC4100E76C8D /* WMTTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTopicVideoView.h; sourceTree = "<group>"; };
+		EC37E1C72036AC4100E76C8D /* WMTTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTopicVideoView.m; sourceTree = "<group>"; };
+		EC37E1C92036AC9300E76C8D /* WMTTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMTTopicVideoView.xib; sourceTree = "<group>"; };
+		EC37E1CB2036AD3000E76C8D /* WMTTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTopicVoiceView.h; sourceTree = "<group>"; };
+		EC37E1CC2036AD3000E76C8D /* WMTTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTopicVoiceView.m; sourceTree = "<group>"; };
+		EC37E1CE2036AD5600E76C8D /* WMTTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTopicPictureView.h; sourceTree = "<group>"; };
+		EC37E1CF2036AD5600E76C8D /* WMTTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTopicPictureView.m; sourceTree = "<group>"; };
+		EC37E1D12036ADBD00E76C8D /* WMTTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMTTopicPictureView.xib; sourceTree = "<group>"; };
+		EC37E1D22036ADBE00E76C8D /* WMTTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMTTopicVoiceView.xib; sourceTree = "<group>"; };
 		EC46910D2005E69C0061C1AF /* WMTTitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTTitleButton.h; sourceTree = "<group>"; };
 		EC46910E2005E69C0061C1AF /* WMTTitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMTTitleButton.m; sourceTree = "<group>"; };
 		EC4691102007505B0061C1AF /* WMTAllViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMTAllViewController.h; sourceTree = "<group>"; };
@@ -178,6 +193,15 @@
 				EC9E0994202C6740008E627E /* WMTTopicCell.h */,
 				EC9E0995202C6740008E627E /* WMTTopicCell.m */,
 				EC9E09A3202C6912008E627E /* WMTTopicCell.xib */,
+				EC37E1C62036AC4100E76C8D /* WMTTopicVideoView.h */,
+				EC37E1C72036AC4100E76C8D /* WMTTopicVideoView.m */,
+				EC37E1C92036AC9300E76C8D /* WMTTopicVideoView.xib */,
+				EC37E1CB2036AD3000E76C8D /* WMTTopicVoiceView.h */,
+				EC37E1CC2036AD3000E76C8D /* WMTTopicVoiceView.m */,
+				EC37E1D22036ADBE00E76C8D /* WMTTopicVoiceView.xib */,
+				EC37E1CE2036AD5600E76C8D /* WMTTopicPictureView.h */,
+				EC37E1CF2036AD5600E76C8D /* WMTTopicPictureView.m */,
+				EC37E1D12036ADBD00E76C8D /* WMTTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -617,14 +641,17 @@
 				ECAFF8061FF351020061755A /* WMTLoginRegisterViewController.xib in Resources */,
 				ECAFF7B51FE95EC30061755A /* LaunchImage-700-568h@2x.png in Resources */,
 				ECAFF7EA1FF1EF9E0061755A /* WMTSubTagcel.xib in Resources */,
+				EC37E1D42036ADBE00E76C8D /* WMTTopicVoiceView.xib in Resources */,
 				ECAFF7BA1FE95EC30061755A /* LaunchImage@2x.png in Resources */,
 				EC7EDABE1FE2449B00C30DF1 /* LaunchScreen.storyboard in Resources */,
 				EC7EDAC81FE2555700C30DF1 /* Images.xcassets in Resources */,
+				EC37E1D32036ADBE00E76C8D /* WMTTopicPictureView.xib in Resources */,
 				ECAFF7AB1FE92CBC0061755A /* WMTADViewController.xib in Resources */,
 				ECC2B8B51FFB897D0025BB42 /* WMTMeTiewController.storyboard in Resources */,
 				ECAFF7B71FE95EC30061755A /* LaunchImage-800-667h@2x.png in Resources */,
 				EC7EDABB1FE2449B00C30DF1 /* Assets.xcassets in Resources */,
 				ECAFF7F11FF345AF0061755A /* WMTFriendTrendViewController.xib in Resources */,
+				EC37E1CA2036AC9300E76C8D /* WMTTopicVideoView.xib in Resources */,
 				ECAFF7B61FE95EC30061755A /* LaunchImage-700@2x.png in Resources */,
 				ECAFF81D1FF367ED0061755A /* WMTLoginRegister.xib in Resources */,
 				ECAFF7B41FE95EC30061755A /* LaunchImage-568h@2x.png in Resources */,
@@ -701,6 +728,7 @@
 				ECAFF8051FF351020061755A /* WMTLoginRegisterViewController.m in Sources */,
 				EC8835281FE2A4A2009F69C4 /* WMTTabBarController.m in Sources */,
 				ECAFF78A1FE688550061755A /* UIBarButtonItem+Item.m in Sources */,
+				EC37E1CD2036AD3000E76C8D /* WMTTopicVoiceView.m in Sources */,
 				ECAFF7BD1FEE26CD0061755A /* WMTADItem.m in Sources */,
 				EC8835211FE2745C009F69C4 /* WMTPublishViewController.m in Sources */,
 				EC8835121FE272B2009F69C4 /* main.m in Sources */,
@@ -720,11 +748,13 @@
 				EC46910F2005E69C0061C1AF /* WMTTitleButton.m in Sources */,
 				ECAFF78D1FE7E1580061755A /* WMTNavigationViewController.m in Sources */,
 				EC88351B1FE273FD009F69C4 /* WMTMeTiewController.m in Sources */,
+				EC37E1C82036AC4100E76C8D /* WMTTopicVideoView.m in Sources */,
 				ECAFF7E51FF1E60F0061755A /* WMTSubTagItem.m in Sources */,
 				ECAFF8191FF367600061755A /* WMTLoginRegister.m in Sources */,
 				ECAFF7861FE626A00061755A /* UIView+Frame.m in Sources */,
 				ECAFF7E21FF1DE140061755A /* WMTSubTagViewController.m in Sources */,
 				EC9E0993202C5FA9008E627E /* XMGNewViewController.m in Sources */,
+				EC37E1D02036AD5600E76C8D /* WMTTopicPictureView.m in Sources */,
 				EC46911E2007514B0061C1AF /* WMTWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
