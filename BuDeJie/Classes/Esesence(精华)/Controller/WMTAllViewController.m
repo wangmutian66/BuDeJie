@@ -376,15 +376,11 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     //    [top.text sizeWithFont:[UIFont systemFontOfSize:15]].height; //只能算出单行的高度
         
         //中间内容的高度
-//        NSLog()
         if(top.type != 29){ //不等于段子类型 （图片，声音，视频）
-    
-        
             CGFloat middleW = WMTScreenW - 2 * WMTMarn;
             CGFloat middleH = middleW  *  top.height /top.width;
             CGFloat middleY = cellHeight;
             CGFloat middleX =WMTMarn;
-            
             top.middleFrame=CGRectMake(middleX, middleY, middleW, middleH);
             cellHeight += middleH + WMTMarn;
         }
@@ -414,8 +410,6 @@ static NSString * const WMTTopicCellId = @"WMTTopicCellId";
     //存储高度
 //            self.cellHeightDict[top]=@{cellHeight};
         [self.cellHeightDict setObject:@(cellHeight) forKey:key];
-        
-        
     }
     
     
