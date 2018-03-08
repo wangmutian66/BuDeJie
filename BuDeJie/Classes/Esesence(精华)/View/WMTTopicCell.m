@@ -140,10 +140,12 @@
         self.pictureView.hidden=YES;
         self.voiceView.hidden = NO;
         self.videoView.hidden=YES;
+       
     }else if(topic.type == 41){
         self.pictureView.hidden=YES;
         self.voiceView.hidden= YES;
         self.videoView.hidden = NO;
+         self.videoView.topic = topic;
     }else if(topic.type == 29){
         self.pictureView.hidden=YES;
         self.voiceView.hidden= YES;

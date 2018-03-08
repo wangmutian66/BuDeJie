@@ -37,4 +37,20 @@
 
 /**中间内容的frame**/
 @property(nonatomic,assign) CGRect middleFrame;
+
+/**小图**/
+@property(nonatomic,strong) NSString *image0;
+/**中图**/
+@property(nonatomic,strong) NSString *image2;
+/**大图**/
+@property(nonatomic,strong) NSString *image1;
+
+/** 音频时长 **/
+@property(nonatomic,assign) NSInteger voicetime;
+/**视频时长**/
+@property(nonatomic,assign) NSInteger videotime;
+/**音频\视频播放次数**/
+@property(nonatomic,assign) NSInteger playcount;
+
+
 @end

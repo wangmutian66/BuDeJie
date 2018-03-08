@@ -59,6 +59,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="A3r-aK-rCI" id="DAx-39-nRC"/>
+                <outlet property="playcount" destination="I2p-Pr-LEN" id="vzt-g5-gg8"/>
+                <outlet property="voicetimeLabel" destination="7e4-uB-drD" id="NGb-9R-sF7"/>
+            </connections>
             <point key="canvasLocation" x="36.5" y="-82.5"/>
         </view>
     </objects>
